@@ -17,6 +17,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://kit.fontawesome.com/YOUR_KIT_CODE.js" crossorigin="anonymous"></script>
+    
+
 </head>
 
 <body class="bg-gray-100 ">
@@ -585,113 +587,109 @@
             </div>
         </section>
 
+<!-- Contact Section -->
+<section class="contact py-16 px-6" id="contacts">
+    <div class="max-w-6xl mx-auto">
+        <h2 class="text-5xl font-bold text-white text-center">Contact Me</h2>
+        <div class="flex flex-wrap justify-between mt-10">
+            <!-- Left Section -->
+            <div class="w-full md:w-1/3 space-y-4">
+                <div class="flex items-center space-x-3">
+                    <i class="fas fa-phone text-orange-500"></i>
+                    <span class="text-gray-300">+916303783301 / +9779807058858</span>
+                </div>
+                <div class="flex items-center space-x-3">
+                    <i class="fas fa-envelope text-orange-500"></i>
+                    <span class="text-gray-300">sanjit9842@gmail.com</span>
+                </div>
+                <div class="flex items-center space-x-3">
+                    <i class="fas fa-map-marker-alt text-orange-500"></i>
+                    <span class="text-gray-300">Bhardha, Nepal</span>
+                </div>
+            </div>
 
-        <!-- contact section start -->
-        <section class="contact bg-[#121212] text-white py-16 px-6" id="contacts">
-            <div class="max-width">
-                <h2 class="title text-5xl font-bold text-white -py-14">Contact Me</h2>
-                <div class="contact-content flex flex-wrap justify-between mt-10">
-                    <!-- Left Section -->
-                    <div class="left w-full md:w-1/3 ">
-                        <div class="space-y-4">
-                            <div class="flex items-center space-x-3">
-                                <i class="fas fa-phone text-orange-500"></i>
-                                <span class="text-gray-300">+916303783301 / +9779807058858</span>
-                            </div>
-                            <div class="flex items-center space-x-3">
-                                <i class="fas fa-envelope text-orange-500"></i>
-                                <span class="text-gray-300">sanjit9842@gmail.com</span>
-                            </div>
-                            <div class="flex items-center space-x-3">
-                                <i class="fas fa-map-marker-alt text-orange-500"></i>
-                                <span class="text-gray-300">Bhardha, Nepal</span>
-                            </div>
-                        </div>
+            <!-- Right Section (Form) -->
+            <div class="w-full md:w-2/3 bg-slate-950 py-10 px-6 rounded-md">
+                <form id="contact-form" class="space-y-4" onsubmit="sendEmail(event)">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <input type="text" id="name" placeholder="Full Name*" required class="w-full p-3 bg-[#1e1e1e] text-white rounded-md border border-gray-600 focus:outline-none">
+                        <input type="email" id="email" placeholder="Email*" required class="w-full p-3 bg-[#1e1e1e] text-white rounded-md border border-gray-600 focus:outline-none">
                     </div>
-        
-                    <!-- Right Section -->
-                    <div class="right w-full md:w-2/3  bg-slate-950 py-10">
-                        <form action="#" class="space-y-4">
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                <input type="text" placeholder="Full Name*" required class="w-full p-3 bg-[#1e1e1e] text-white rounded-md border border-gray-600 focus:outline-none">
-                                <input type="email" placeholder="Email*" required class="w-full p-3 bg-[#1e1e1e] text-white rounded-md border border-gray-600 focus:outline-none">
-                            </div>
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                <select required class="w-full p-3 bg-[#1e1e1e] text-white rounded-md border border-gray-600 focus:outline-none">
-                                    <option>Select Designation</option>
-                                    <option>Frontend Developer</option>
-                                    <option>Web Developer</option>
-                                    <option>Full Stack Developer</option>
-                                </select>
-                                <input type="text" placeholder="Mobile*" required class="w-full p-3 bg-[#1e1e1e] text-white rounded-md border border-gray-600 focus:outline-none">
-                            </div>
-                            <textarea placeholder="Message*" required class="w-full p-3 bg-[#1e1e1e] text-white rounded-md border border-gray-600 focus:outline-none"></textarea>
-                            <button type="submit" class="bg-orange-500 hover:bg-fuchsia-700   text-black px-6 py-3 rounded-md font-semibold flex items-center space-x-2 ">
-                                <span>Send Message</span>
-                                <i class="fas fa-arrow-right"></i>
-                            </button>
-                        </form>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <select id="designation" required class="w-full p-3 bg-[#1e1e1e] text-white rounded-md border border-gray-600 focus:outline-none">
+                            <option value="">Select Designation</option>
+                            <option value="Frontend Developer">Frontend Developer</option>
+                            <option value="Web Developer">Web Developer</option>
+                            <option value="Full Stack Developer">Full Stack Developer</option>
+                        </select>
+                        <input type="text" id="mobile" placeholder="Mobile*" required class="w-full p-3 bg-[#1e1e1e] text-white rounded-md border border-gray-600 focus:outline-none">
+                    </div>
+                    <textarea id="message" placeholder="Message*" required class="w-full p-3 bg-[#1e1e1e] text-white rounded-md border border-gray-600 focus:outline-none"></textarea>
+                    <button type="submit" class="bg-orange-500 hover:bg-fuchsia-700 text-black px-6 py-3 rounded-md font-semibold flex items-center space-x-2">
+                        <span>Send Message</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </form>
+            </div>
+
+
+
+        </div>
+
+        <!-- Footer Section -->
+        <footer class="bg-slate-900 text-white py-10 mt-16">
+            <div class="max-w-6xl mx-auto flex flex-wrap justify-between items-start">
+                <!-- Logo and Social Icons -->
+                <div>
+                    <h2 class="text-xl font-bold"><span class="text-orange-500">S</span>anjit</h2>
+                    <div class="flex space-x-4 mt-3">
+                        <a href="https://www.linkedin.com/in/sanjit-/" class="text-gray-400 hover:text-blue-600"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://github.com/Sanjit-dass" class="text-gray-400 hover:text-gray-500"><i class="fab fa-github"></i></a>
+                        <a href="https://www.facebook.com/dassanjitkumar.das"><i class="fa-brands fa-facebook text-blue-600 hover:text-red-500"></i></a>
+                        <a href="https://www.youtube.com/@engineeringbasic94" class="text-gray-400 hover:text-red-500"><i class="fab fa-youtube"></i></a>
+                        <a href="https://api.whatsapp.com/send?phone=916303783301" target="_blank"><i class="fa-brands fa-whatsapp text-green-500 text-xl"></i></a>
                     </div>
                 </div>
-        
-                <!-- Footer Section -->
-                <footer class="bg-slate-900 text-white py-10">
-                    <div class="max-width flex flex-wrap justify-between items-start">
-                        <!-- Logo and Social Icons -->
-                        <div>
-                            <h2 class="text-xl font-bold">
-                                <span class="text-orange-500">S</span>anjit
-                            </h2>
-                            <div class="flex space-x-4 mt-3">
-                                <a href="https://www.linkedin.com/in/sanjit-/" class="text-gray-400 hover:text-red-500 text-blue-600"><i class="fab fa-linkedin-in"></i></a>
-                                <a href="https://github.com/Sanjit-dass" class="text-gray-400 hover:text-red-500"><i class="fab fa-github"></i></a>
-                                <a href="https://www.facebook.com/dassanjitkumar.das"> <i
-                                    class="fa-brands fa-facebook text-xl text-blue-600 hover:text-red-500"></i></a>
-                                <a href="https://www.youtube.com/@engineeringbasic94" class="text-gray-400 hover:text-red-500"><i class="fab fa-youtube"></i></a>
-                                <a href="https://api.whatsapp.com/send?phone=916303783301" target="_blank">
-                                    <i class="fa-brands fa-whatsapp text-green-500 text-xl"></i>
-                                </a>
-                                
-                                
-                                
-                            </div>
-                        </div>
-        
-                        <!-- Services -->
-                        <div>
-                            <h3 class="font-semibold">Services</h3>
-                            <ul class="text-gray-300 space-y-1 mt-2">
-                                <li>Website Designer</li>
-                                <li>Presenting</li>
-                                <li>Developer</li>
-                                <li>Team Management</li>
-                            </ul>
-                        </div>
-        
-                        <!-- Personal Info -->
-                        <div>
-                            <h3 class="font-semibold">Personal Info</h3>
-                            <ul class="text-gray-300 space-y-1 mt-2">
-                                <li>+916303783301</li>
-                                <li>sanjit9842@gmail.com</li>
-                                <li>Bhardha, Nepal</li>
-                            </ul>
-                        </div>
-        
-                        <!-- Contact Form & Message -->
-                        <div>
-                            <div class="flex">
-                                <input type="email" value="example@gmail.com" class="bg-[#1e1e1e] text-white px-3 py-2 rounded-l-md border border-gray-600 focus:outline-none">
-                                <button class="bg-orange-500 text-black px-4 py-2 rounded-r-md hover:bg-fuchsia-700">Send</button>
-                            </div>
-                            <p class="text-gray-400 mt-0 w-64 py-5">
-                                "If you like my work, feel free to reach out! I'm seeking job opportunities to contribute my skills and grow professionally. Let’s connect!"
-                            </p>
-                        </div>
+
+                <!-- Services -->
+                <div>
+                    <h3 class="font-semibold">Services</h3>
+                    <ul class="text-gray-300 space-y-1 mt-2">
+                        <li>Website Designer</li>
+                        <li>Presenting</li>
+                        <li>Developer</li>
+                        <li>Team Management</li>
+                    </ul>
+                </div>
+
+                <!-- Personal Info -->
+                <div>
+                    <h3 class="font-semibold">Personal Info</h3>
+                    <ul class="text-gray-300 space-y-1 mt-2">
+                        <li>+916303783301</li>
+                        <li>sanjit9842@gmail.com</li>
+                        <li>Bhardha, Nepal</li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter -->
+                <div>
+                    <div class="flex">
+                        <input type="email" value="example@gmail.com" class="bg-[#1e1e1e] text-white px-3 py-2 rounded-l-md border border-gray-600 focus:outline-none">
+                        <button class="bg-orange-500 text-black px-4 py-2 rounded-r-md hover:bg-fuchsia-700">Send</button>
                     </div>
-                </footer>
+                    <p class="text-gray-400 mt-2 w-64 py-5">
+                        "If you like my work, feel free to reach out! I'm seeking job opportunities to contribute my skills and grow professionally. Let’s connect!"
+                    </p>
+                </div>
             </div>
-        </section>
+        </footer>
+    </div>
+</section>
+
+
+
+
         
 
 
@@ -704,8 +702,9 @@
             </span>
         </footer>
 
-
+        <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
         <script src="script.js"></script>
+
 </body>
 
 </html>

@@ -1,3 +1,9 @@
+document.addEventListener("DOMContentLoaded", function () {
+    emailjs.init("G1GUQYgdcCt36H_j7"); // Replace with your actual Public Key
+    console.log("✅ EmailJS Initialized:", emailjs._userID);
+});
+
+
 $(document).ready(function(){
     $(window).scroll(function(){
         // sticky navbar on scroll script
@@ -290,4 +296,48 @@ document.addEventListener("DOMContentLoaded", function () {
     image.classList.add("shake-image");
 });
 
+//email adimin and auto reply
+// Initialize EmailJS when the page loads
+document.addEventListener("DOMContentLoaded", function () {
+    emailjs.init("G1GUQYgdcCt36H_j7"); // Replace with your actual Public Key
+    console.log("✅ EmailJS Initialized:", emailjs._userID);
+});
 
+// Function to send email
+function sendEmail(event) {
+    event.preventDefault(); // Prevent form refresh
+
+    console.log("📩 Sending email...");
+
+    // Collect form data
+    const templateParams = {
+        name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        designation: document.getElementById("designation").value,
+        mobile: document.getElementById("mobile").value,
+        message: document.getElementById("message").value
+    };
+
+    console.log("📨 Template Params:", templateParams);
+
+    // Send email to Admin
+    emailjs.send("service_2ubzjri", "template_buarrzi", templateParams)
+        .then(response => {
+            console.log("✅ Admin Email Sent!", response);
+
+            // Send auto-reply to User
+            return emailjs.send("service_2ubzjri", "template_9aj9g8l", templateParams);
+        })
+        .then(response => {
+            console.log("✅ User Auto-Reply Sent!", response);
+            alert("✅ Message sent successfully!");
+            document.getElementById("contact-form").reset(); // Clear form
+        })
+        .catch(error => {
+            console.error("❌ Error sending email:", error);
+            alert("⚠️ Something went wrong. Check the console.");
+        });
+}
+
+// Attach event listener to form
+document.getElementById("contact-form").addEventListener("submit", sendEmail);

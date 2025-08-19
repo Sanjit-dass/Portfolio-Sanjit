@@ -264,38 +264,8 @@ function openPreview(imgSrc) {
         });
         
 
-        //photo shake 
-        document.addEventListener("DOMContentLoaded", function () {
-    const image = document.querySelector(".column.left img");
-
-    function shakeImage() {
-        image.style.position = "relative";
-        let counter = 0;
-        const interval = setInterval(() => {
-            const x = (Math.random() * 4 - 2) + "px"; // Random shake in X-axis
-            const y = (Math.random() * 4 - 2) + "px"; // Random shake in Y-axis
-            image.style.transform = `translate(${x}, ${y})`;
-
-            counter++;
-            if (counter > 10) { // Stops shaking after some time
-                clearInterval(interval);
-                image.style.transform = "translate(0, 0)";
-            }
-        }, 50);
-    }
-
-    // Trigger shake effect when the mouse hovers over the image
-    image.addEventListener("mouseenter", shakeImage);
-});
-
-
-
-//phot shake
-document.addEventListener("DOMContentLoaded", function () {
-    let image = document.querySelector(".about .left img");
-    image.classList.add("shake-image");
-});
-
+        
+       
 //email adimin and auto reply
 // Initialize EmailJS when the page loads
 document.addEventListener("DOMContentLoaded", function () {
@@ -341,3 +311,40 @@ function sendEmail(event) {
 
 // Attach event listener to form
 document.getElementById("contact-form").addEventListener("submit", sendEmail);
+
+
+  const form = document.getElementById('contact-form');
+  const status = document.getElementById('form-status');
+
+  form.addEventListener('submit', async function(e) {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+    const data = Object.fromEntries(formData.entries());
+
+    try {
+      const response = await fetch(form.action, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      });
+
+      if (response.ok) {
+        status.textContent = "Message sent successfully!";
+        status.classList.remove('text-red-500');
+        status.classList.add('text-green-400');
+        form.reset(); // reset form
+      } else {
+        status.textContent = "Failed to send message. Please try again.";
+        status.classList.remove('text-green-400');
+        status.classList.add('text-red-500');
+      }
+    } catch (error) {
+      status.textContent = "An error occurred. Please try again.";
+      status.classList.remove('text-green-400');
+      status.classList.add('text-red-500');
+    }
+  });
+
+
+  

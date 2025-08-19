@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Portfolio Website</title>
+    <link rel="icon" type="image/png" href="images/about.jpg">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
@@ -18,14 +19,15 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://kit.fontawesome.com/YOUR_KIT_CODE.js" crossorigin="anonymous"></script>
     
-
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body class="bg-gray-100 ">
+
     <div class="scroll-up-btn">
         <i class="fas fa-angle-up"></i>
     </div>
-    <nav class="navbar bg-slate-950">
+ <nav class="navbar bg-slate-950">
         <div class="max-width flex justify-between items-center">
             <div class="logo">
                 <a href="#">Sanjit Das</a>
@@ -44,663 +46,826 @@
             </div>
         </div>
     </nav>
+<!-- 
+    video start here -->
+   <section class="video-bg-section border border-b-8 border-gray-800">
+  <video autoplay muted loop playsinline class="video-bg" poster="fallback.jpg">
+    <source src="gallary/video1.mp4" type="video/mp4">
+  </video>
+
+  <section class="home flex flex-col md:flex-row items-center justify-center md:justify-around 
+         px-4 md:px-32 py-20 min-h-screen gap-y-12 md:gap-x-28">
+
+
+  <!-- 🖼 Image (put first in HTML) -->
+<div class="relative flex items-center justify-center order-1 md:order-1">
+  <div class="relative w-[18rem] h-[18rem] sm:w-[22rem] sm:h-[22rem] lg:w-[20rem] lg:h-[20rem] flex items-center justify-center">
     
-
-    <!-- home section start -->
-    <section class="home justify-around" id="home">
-        <div class="max-width">
-            <div class="home-content">
-                <div class="text-1">Hello, my name is</div>
-                <div class="text-2">Sanjit Das</div>
-                <div class="text-2xl px-2xl text-red-600 font-bold text-3xl">And I'm a <span class="typing"></span>
-                </div>
-
-                <a href="https://drive.google.com/uc?export=download&id=1VsLVHi9saCOv7HCh1oC3pW9ZYAvJoqlC" 
-                download 
-                class="bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-orange-700 transition flex items-center gap-2">
-                <i class="fa-solid fa-download"></i> Download Resume
-             </a>
-             
-             
-                
-                
-
-            </div>
-        </div>
-        <div class="flex items-center">
-            <img src="./images/sanjit1.png" alt="" class="w-[500px] h-[500px] object-cover scale-110">
-        </div>
-    </section>
+    <!-- Gradient Border Animation -->
+    <div class="absolute inset-0 rounded-full p-[4px] animate-border-spin 
+                bg-gradient-to-r from-green-800 via-blue-700 via-indigo-600  to-red-700 shadow-2xl shadow-indigo-600">
+      
+      <img src="./images/s1.jpg" alt="Profile"
+           class="w-full h-full object-cover rounded-full border-4 border-transparent shadow-2xl" />
+    </div>
+    
+  </div>
+</div>
 
 
+  <!-- 📝 Text -->
+  <div class="w-full md:max-w-2xl space-y-10 text-center md:text-left order-2 md:order-2">
+    <div class="space-y-6">
+      <div class="font-bold bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent text-3xl md:text-4xl">
+        Hello, my name is
+      </div>
+      <div class="bg-gradient-to-r from-fuchsia-700 via-red-500 to-yellow-500 bg-clip-text text-transparent text-5xl md:text-6xl font-extrabold">
+        SANJIT DAS
+      </div>
+      <div class="text-xl md:text-3xl bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent font-bold">
+        And I'm a <span class="typing"></span>
+      </div>
+
+      <!-- Resume Button -->
+      <div class="flex justify-center md:justify-start pb-9">
+        <a href="https://drive.google.com/file/d/1lG1fnLEV1mYHSLCXw5u1Urlc-LuyVnyF/view?usp=sharing" 
+           target="_blank"
+           class="group relative inline-flex items-center gap-3 px-8 py-4 rounded-xl text-lg font-semibold text-white bg-gradient-to-r from-orange-500 to-pink-600 shadow-lg hover:scale-105 transition duration-300">
+          <i class="fa-solid fa-download"></i>
+          <span>Download Resume</span>
+          <span class="absolute inset-0 rounded-xl bg-white/20 opacity-0 group-hover:opacity-100 transition"></span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</section>
+
+
+<!----->
+ 
     <!-- about section start -->
-    <section class="about" id="about">
-        <div class="max-width">
-            <h2 class="title">About me</h2>
-            <div class="about-content">
-                <div class="column left">
-                    <img src="gallary/sanjit10.png" alt="Sanjit" class="shake-image">
-                </div>
-                <div class="column right">
-                    <div class="text">I'm Sanjit Das and I'm a <span class="typing-2"></span></div>
-                    <p>I am a Front-End Developer with strong skills in HTML, CSS, JavaScript, React.js, Tailwind CSS,
-                        and Bootstrap. I specialize in building responsive, clean, and user-friendly web applications
-                        with modern UI design.
+<section class="about bg-gradient-to-r from-purple-200 via-pink-100 to-red-300" id="about">
+  <div class="max-w-6xl mx-auto px-4"> <!-- Added padding for small screens -->
+    <h2 class="title text-3xl md:text-4xl font-bold text-center mb-12 md:mb-20" data-aos="fade-up">
+      About me
+    </h2>
 
-                        I have developed multiple real-world projects like e-commerce websites, interactive games, and
-                        portfolio sites, focusing on delivering smooth user experiences.
+    <div class="about-content flex flex-col md:flex-row gap-10 md:gap-8 items-center">
+      
+      <!-- Left Column -->
+      <div class="column left w-full md:w-1/2 flex justify-center" data-aos="fade-right">
+        <img src="images/about.jpg" alt="Sanjit" 
+             class="shake-image rounded-lg shadow-xl w-64 sm:w-80 md:w-full max-w-sm">
+      </div>
 
-                        Along with frontend development, I am also exploring Node.js and MongoDB to build full-stack
-                        applications.
-
-                        I am passionate about coding, problem-solving, and continuously learning new technologies to
-                        grow as a developer.</p>
-                    <div class="flex items-center gap-4 mt-6">
-
-                        <a href="https://www.linkedin.com/in/sanjit-/" target="_blank">
-                            <i class="fa-brands fa-linkedin text-4xl text-blue-600"></i>
-                        </a>
-                        <a href="https://www.facebook.com/dassanjitkumar.das"> <i
-                                class="fa-brands fa-facebook text-4xl text-blue-600"></i></a>
-
-                        <a href="https://github.com/Sanjit-dass" target="_blank">
-                            <i class="fa-brands fa-github text-4xl text-black"></i>
-                        </a>
-                        <a href="https://www.youtube.com/@engineeringbasic94" target="_blank">
-                            <i class="fa-brands fa-youtube text-4xl text-red-600"></i>
-                        </a>
-
-                        <a href="https://www.instagram.com/sanjitdas_8153?igsh=anZsNWhwaDdrODJh" target="_blank">
-                            <i class="fa-brands fa-instagram text-4xl text-pink-500"></i>
-                        </a>
-                        <a href="https://api.whatsapp.com/send?phone=916303783301" target="_blank">
-                            <i class="fa-brands fa-whatsapp text-green-500 text-4xl"></i>
-                        </a>
-                        
-                        
-                        
-                    </div>
-                </div>
-            </div>
+      <!-- Right Column -->
+      <div class="column right w-full md:w-1/2 space-y-4 text-center md:text-left" data-aos="fade-left">
+        <div class="text text-xl sm:text-2xl font-semibold">
+          I'm Sanjit Das and I'm a <span class="typing-2"></span>
         </div>
-    </section>
 
+        <p class="text-gray-900 text-base sm:text-lg leading-relaxed">
+          I am a Front-End Developer with strong skills in HTML, CSS, JavaScript, React.js, Tailwind CSS,
+          and Bootstrap. I specialize in building responsive, clean, and user-friendly web applications
+          with modern UI design.
+          I have developed multiple real-world projects like e-commerce websites, interactive games, and
+          portfolio sites, focusing on delivering smooth user experiences.
 
-    <!-- Education and experiences section -->
-
-    <section id="education" class="bg-black text-white py-10 font-sans">
-        <div class="max-w-6xl mx-auto px-5">
-
-            <div class="font-bold text-5xl flex justify-center -mt-8 mb-6 text-center py-16">
-                <h1>Education And Experience</h1>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-
-                <!-- Education -->
-                <div class="space-y-10">
-
-                    <!-- B.Tech -->
-                    <div class="flex items-start space-x-4">
-                        <i class="fa-solid fa-graduation-cap text-orange-600 text-3xl"></i>
-                        <div>
-                            <h3 class="text-2xl font-bold">Bachelor of Technology</h3>
-                            <p class="text-gray-400">Aditya University | 2022-2026</p>
-                        </div>
-                    </div>
-
-                    <!-- intermediate -->
-                    <div class="flex items-start space-x-4">
-                        <i class="fa-solid fa-graduation-cap text-orange-600 text-3xl"></i>
-                        <div>
-                            <h3 class="text-2xl font-bold">Intermediate</h3>
-                            <p class="text-gray-400 w-2/3">Bhanu Memorial English Boarding Secondary School | 2018-2020
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- schooling -->
-                    <div class="flex items-start space-x-4">
-                        <i class="fa-solid fa-graduation-cap text-orange-600 text-3xl"></i>
-                        <div>
-                            <h3 class="text-2xl font-bold">Schooling</h3>
-                            <p class="text-gray-400">Bal Bodh Secondary School | 2018</p>
-                        </div>
-                    </div>
-
-                </div>
-
-                <!-- Experience -->
-                <div class="space-y-10">
-
-
-                    <!-- Java Full Stack Intern -->
-                    <div class="flex items-start space-x-4">
-                        <i class="fa-solid fa-briefcase text-orange-600 text-3xl"></i>
-                        <div>
-                            <h3 class="text-2xl font-bold">Java Full Stack Intern</h3>
-                            <p class="text-gray-400">BrainOvision Solutions Pvt. Ltd | 2024-2025</p>
-                        </div>
-                    </div>
-
-                    <!-- web development -->
-                    <div class="flex items-start space-x-4">
-                        <i class="fa-solid fa-briefcase text-orange-600 text-3xl"></i>
-                        <div>
-                            <h3 class="text-2xl font-bold">Web Development</h3>
-                            <p class="text-gray-400">InternPe | 2024-2025</p>
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
+        
+          Along with frontend development, I am also exploring Node.js and MongoDB to build full-stack
+          applications. I am passionate about coding, problem-solving, and continuously learning new
+          technologies to grow as a developer.
+        </p>
+        <!-- Social Icons -->
+        <div class="flex flex-wrap justify-center md:justify-start items-center gap-4 mt-6">
+          <a href="https://www.linkedin.com/in/sanjit-/" target="_blank" data-aos="zoom-in"><i class="fa-brands fa-linkedin text-3xl sm:text-4xl text-blue-600"></i></a>
+         
+          <a href="https://www.facebook.com/dassanjitkumar.das" data-aos="zoom-in" data-aos-delay="100"><i class="fa-brands fa-facebook text-3xl sm:text-4xl text-blue-600"></i></a>
+          <a href="https://github.com/Sanjit-dass" target="_blank" data-aos="zoom-in" data-aos-delay="200"><i class="fa-brands fa-github text-3xl sm:text-4xl text-black"></i></a>
+          <a href="https://www.youtube.com/@engineeringbasic94" target="_blank" data-aos="zoom-in" data-aos-delay="300"><i class="fa-brands fa-youtube text-3xl sm:text-4xl text-red-600"></i></a>
+          <a href="https://www.instagram.com/sanjitdas_8153?igsh=anZsNWhwaDdrODJh" target="_blank" data-aos="zoom-in" data-aos-delay="400"><i class="fa-brands fa-instagram text-3xl sm:text-4xl text-pink-500"></i></a>
+         <a href="https://api.whatsapp.com/send?phone=9779807058858" target="_blank" data-aos="zoom-in" data-aos-delay="500">
+  <i class="fa-brands fa-square-whatsapp text-3xl sm:text-4xl text-green-500"></i>
+</a>
         </div>
-    </section>
+      </div>
 
-    <!-- project section -->
-
-
-    <section class="projects bg-[#0a0d1b] py-10" id="projects">
-        <div class="max-w-screen-lg mx-auto text-center">
-            <h2 class="text-5xl font-bold text-white mb-8">My Projects</h2>
-            <div class="carousel owl-carousel">
-                <!-- Project 1 -->
-                <div class="card bg-gray-800 rounded-lg p-6 hover:bg-crimson transition-all duration-300 ease-in-out ">
-                    <div class="box flex flex-col items-center justify-center">
-                        <img src="./images/sanjitmart.jpg" alt="Sanjit Mart"
-                            class="w-36 h-36 object-cover transition-all duration-300 ease-in-out hover:border-4 hover:border-white">
-                        <div class="text text-xl font-semibold text-white mt-4">Sanjit Mart</div>
-                        <p class="text-white mt-2">Developed an e-commerce platform with a variety of products and user
-                            functionalities.</p>
-                        <a href="https://sanjit-dass.github.io/Summer-Intership-project-3-1/" target="_blank"
-                            class="text-xs text-blue-400 hover:text-blue-600 mt-2 underline"><button
-                                class="bg-purple-800  text-white text-xl rounded-full px-3 py-2 hover:bg-fuchsia-700">See
-                                Details</button></a>
-                    </div>
-                </div>
-
-                <!-- Project 2 -->
-                <div class="card bg-gray-800 rounded-lg p-6 hover:bg-crimson transition-all duration-300 ease-in-out">
-                    <div class="box flex flex-col items-center justify-center">
-                        <img src="./images/spotify.jpg" alt="Spotify Clone"
-                            class="w-36 h-36 object-cover transition-all duration-300 ease-in-out hover:border-4 hover:border-white">
-                        <div class="text text-xl font-semibold text-white mt-4">Spotify Clone</div>
-                        <p class="text-white mt-2">Created a Spotify clone with user authentication and music streaming
-                            features.</p>
-                        <a href="https://sanjit-dass.github.io/Spotify_Colon/" target="_blank"
-                            class="text-xs text-blue-400 hover:text-blue-600 mt-2 underline"><button
-                                class="bg-purple-800  text-white text-xl rounded-full px-3 py-2 hover:bg-fuchsia-700">See
-                                Details</button></a>
-                    </div>
-                </div>
-
-                <!-- Project 3 -->
-                <div class="card bg-gray-800 rounded-lg p-6 hover:bg-crimson transition-all duration-300 ease-in-out">
-                    <div class="box flex flex-col items-center justify-center">
-                        <img src="./images/simon sange.jpg" alt="Simon Says Game"
-                            class="w-36 h-36 object-cover transition-all duration-300 ease-in-out hover:border-4 hover:border-white">
-                        <div class="text text-xl font-semibold text-white mt-4">Simon Says Game</div>
-                        <p class="text-white mt-2">A fun Simon Says game with levels and high scores implemented using
-                            JavaScript.</p>
-                        <a href="https://sanjit-dass.github.io/Simonsay-games/" target="_blank"
-                            class="text-xs text-blue-400 hover:text-blue-600 mt-2 underline"><button
-                                class="bg-purple-800  text-white text-xl rounded-full px-3 py-2 hover:bg-fuchsia-700">See
-                                Details</button></a>
-                    </div>
-                </div>
-
-                <!-- Project 4 -->
-                <div class="card bg-gray-800 rounded-lg p-6 hover:bg-crimson transition-all duration-300 ease-in-out">
-                    <div class="box flex flex-col items-center justify-center">
-                        <img src="./images/connect4game.jpg" alt="Connect 4 Game"
-                            class="w-36 h-36 object-cover transition-all duration-300 ease-in-out hover:border-4 hover:border-white">
-                        <div class="text text-xl font-semibold text-white mt-4">Connect 4 Game</div>
-                        <p class="text-white mt-2">Build a two-player Connect 4 game using JavaScript and DOM
-                            manipulation.</p>
-                        <a href="https://sanjit-dass.github.io/Connect-Four-Game/" target="_blank"
-                            class="text-xs text-blue-400 hover:text-blue-600 mt-2 underline"><button
-                                class="bg-purple-800  text-white text-xl rounded-full px-3 py-2 hover:bg-fuchsia-700">See
-                                Details</button></a>
-                    </div>
-                </div>
-
-                <!-- Project 5 -->
-                <div class="card bg-gray-800 rounded-lg p-6 hover:bg-crimson transition-all duration-300 ease-in-out">
-                    <div class="box flex flex-col items-center justify-center">
-                        <img src="./images/ecommerce.jpg" alt="E-Commerce Website"
-                            class="w-36 h-36 object-cover transition-all duration-300 ease-in-out hover:border-4 hover:border-white">
-                        <div class="text text-xl font-semibold text-white mt-4">E-Commerce Website</div>
-                        <p class="text-white mt-2">Developed an e-commerce website with a user-friendly interface for
-                            browsing and purchasing products.</p>
-                        <a href="https://sanjit-dass.github.io/mantra_colonperfect/" target="_blank"
-                            class="text-xs text-blue-400 hover:text-blue-600 mt-2 underline"><button
-                                class="bg-purple-800  text-white text-xl rounded-full px-3 py-2 hover:bg-fuchsia-700">See
-                                Details</button></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-
-    <!-- services section start -->
-    <section class="services" id="services">
-        <div class="max-width">
-            <h2 class="title">My services</h2>
-            <div class="serv-content">
-                <div class="card">
-                    <div class="box">
-                        <i class="fas fa-paint-brush"></i>
-                        <div class="text">Website Designer</div>
-                        <p>Website Designer Presenting Developer Team Management</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="box">
-                        <i class="fas fa-chart-line"></i>
-                        <div class="text">Presenting</div>
-                        <p>Website Designer Presenting Developer Team Management</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="box">
-                        <i class="fas fa-code"></i>
-                        <div class="text">Developer</div>
-                        <p>Website Designer Presenting Developer Team Management</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-
-    <!-- skills section start -->
-    <section class="skills bg-[#0a0d1b] py-16" id="skills">
-        <div class="max-w-screen-lg mx-auto text-center">
-            <h2 class="text-5xl font-bold text-white mb-5 ">Technical Skills</h2>
-            <div class="flex flex-col lg:flex-row gap-8 py-10">
-                <!-- Left Column -->
-                <div class="left flex-1">
-                    <div class="text text-xl font-semibold text-white mb-4">My technical expertise & experiences.</div>
-                    <p class="text-white mb-6">I am a passionate developer with proficiency in multiple programming
-                        languages and technologies. I have experience building dynamic websites and applications using
-                        modern frameworks and tools.</p>
-                    <a href="https://drive.google.com/uc?export=download&id=10TWYEKGBZA81Rw0aAjps-htnItd34iu2" class="text-blue-400 hover:text-blue-600 underline">Read more</a>
-                </div>
-
-                <!-- Right Column -->
-                <div class="right flex-1">
-
-                    <!-- Frontend Development -->
-                    <div class="bars mb-6">
-                        <div class="info flex justify-between items-center mb-2">
-                            <span class="text-white">HTML5, CSS3, Tailwind CSS, Bootstrap, JavaScript</span>
-                            <span class="text-white">90%</span>
-                        </div>
-                        <div class="line w-full h-2 bg-gray-700 rounded-full">
-                            <div class="progress h-full bg-red-600 rounded-full" style="width: 90%;"></div>
-                        </div>
-                    </div>
-
-                    <!-- Programming Languages -->
-                    <div class="bars mb-6">
-                        <div class="info flex justify-between items-center mb-2">
-                            <span class="text-white">C, C++, Python, Java</span>
-                            <span class="text-white">80%</span>
-                        </div>
-                        <div class="line w-full h-2 bg-gray-700 rounded-full">
-                            <div class="progress h-full bg-blue-500 rounded-full" style="width: 80%;"></div>
-                        </div>
-                    </div>
-
-                    <!-- Database Management (SQL & OOPS) -->
-                    <div class="bars mb-6">
-                        <div class="info flex justify-between items-center mb-2">
-                            <span class="text-white">SQL, OOPS</span>
-                            <span class="text-white">70%</span>
-                        </div>
-                        <div class="line w-full h-2 bg-gray-700 rounded-full">
-                            <div class="progress h-full bg-green-500 rounded-full" style="width: 70%;"></div>
-                        </div>
-                    </div>
-
-                    <!-- Developer Tools -->
-                    <div class="bars mb-6">
-                        <div class="info flex justify-between items-center mb-2">
-                            <span class="text-white">VS Code, Jupyter Notebook, Git, GitHub, Figma</span>
-                            <span class="text-white">85%</span>
-                        </div>
-                        <div class="line w-full h-2 bg-gray-700 rounded-full">
-                            <div class="progress h-full bg-purple-500 rounded-full" style="width: 85%;"></div>
-                        </div>
-                    </div>
-
-                    <!-- Technologies & Frameworks -->
-                    <div class="bars mb-6">
-                        <div class="info flex justify-between items-center mb-2">
-                            <span class="text-white">React.js, Node.js, Express.js, MongoDB</span>
-                            <span class="text-white">60%</span>
-                        </div>
-                        <div class="line w-full h-2 bg-gray-700 rounded-full">
-                            <div class="progress h-full bg-yellow-500 rounded-full" style="width: 60%;"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!--rewarded  gallary -->
-
-    <div class="bg-[#0a0d1b] " id="gallary">
-        <h2 class="text-white font-bold mb-4 text-5xl text-center py-9">Gallery</h2>
-        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            <img src="./gallary/tech.jpg" alt="Gallery Image"
-                class="cursor-pointer rounded-lg shadow-lg hover:opacity-80" onclick="openImage(this.src)">
-            <img src="./gallary/tech-7.jpg" alt="Gallery Image"
-                class="cursor-pointer rounded-lg shadow-lg hover:opacity-80" onclick="openImage(this.src)">
-            <img src="./gallary/tech-3.jpg" alt="Gallery Image"
-                class="cursor-pointer rounded-lg shadow-lg hover:opacity-80" onclick="openImage(this.src)">
-            <img src="./gallary/tech-4.jpg" alt="Gallery Image"
-                class="cursor-pointer rounded-lg shadow-lg hover:opacity-80" onclick="openImage(this.src)">
-            <img src="./gallary/tech-11.jpg" alt="Gallery Image"
-                class="cursor-pointer rounded-lg shadow-lg hover:opacity-80" onclick="openImage(this.src)">
-            <img src="./gallary/tech-6.jpg" alt="Gallery Image"
-                class="cursor-pointer rounded-lg shadow-lg hover:opacity-80" onclick="openImage(this.src)">
-            <img src="./gallary/tech-7.jpg" alt="Gallery Image"
-                class="cursor-pointer rounded-lg shadow-lg hover:opacity-80" onclick="openImage(this.src)">
-            <img src="./gallary/9.jpg" alt="Gallery Image" class="cursor-pointer rounded-lg shadow-lg hover:opacity-80"
-                onclick="openImage(this.src)">
-            <img src="./gallary/tech2.jpg" alt="Gallery Image"
-                class="cursor-pointer rounded-lg shadow-lg hover:opacity-80 h-60 w-80 object-cover"
-                onclick="openImage(this.src)">
-            <img src="./gallary/tech-5.jpg" alt="Gallery Image"
-                class="cursor-pointer rounded-lg shadow-lg hover:opacity-80 h-60 object-cover"
-                onclick="openImage(this.src)">
-            <img src="./gallary/8.jpg" alt="Gallery Image"
-                class="cursor-pointer rounded-lg shadow-lg hover:opacity-80 h-60 w-80 object-cover"
-                onclick="openImage(this.src)">
-            <img src="./gallary/tech-12.jpg" alt="Gallery Image"
-                class="cursor-pointer rounded-lg shadow-lg hover:opacity-80 h-60 w-80 object-cover"
-                onclick="openImage(this.src)">
-
-
-        </div>
     </div>
-
-    <!-- Fullscreen Image Viewer -->
-    <div id="fullscreenViewer"
-        class="fixed inset-0 bg-black bg-opacity-90 flex flex-col items-center justify-center hidden">
-        <div class="absolute top-5 right-5 flex gap-3">
-            <!-- Download Button -->
-            <a id="downloadImage" class="text-white bg-red-700  px-3 py-3  rounded text-sm hover:bg-gray-600"
-                download>Download</a>
-            <!-- Close Button -->
-            <button class="text-white text-lg" onclick="closeImage()">✖</button>
-        </div>
-        <img id="fullscreenImage" class="max-w-full max-h-full rounded-lg">
-    </div>
-
-
-
-    <!-- Certificate section -->
-
-    <div class="bg-[#0a0d1b] " id="certificate">
-        <h2 class="text-white font-bold mb-4 text-5xl text-center py-9">Certifications</h2>
-        <div class="slider-container">
-            <div class="slider">
-                <!-- Certificate Items -->
-                <div class="flex space-x-6">
-                    <div class="relative bg-white rounded-lg shadow-lg w-64 p-4 text-center text-black">
-                        <img src="certificate/innovix.jpg" class="w-full h-40 object-cover rounded-md cursor-pointer"
-                            onclick="openPreview('certificate/innovix.jpg')">
-                        <p class="bg-orange-500 text-white py-2 mt-2 rounded-md">Innovix Certified</p>
-                    </div>
-
-                    <div class="relative bg-white rounded-lg shadow-lg w-64 p-4 text-center text-black">
-                        <img src="certificate/Python1.jpeg" class="w-full h-40 object-cover rounded-md cursor-pointer"
-                            onclick="openPreview('certificate/Python1.jpeg')">
-                        <p class="bg-orange-500 text-white py-2 mt-2 rounded-md">Python Certified</p>
-                    </div>
-
-                    <div class="relative bg-white rounded-lg shadow-lg w-64 p-4 text-center text-black">
-                        <img src="certificate/python-2.jpg" class="w-full h-40 object-cover rounded-md cursor-pointer"
-                            onclick="openPreview('certificate/python-2.jpg')">
-                        <p class="bg-orange-500 text-white py-2 mt-2 rounded-md">Python Advanced</p>
-                    </div>
-
-                    <div class="relative bg-white rounded-lg shadow-lg w-64 p-4 text-center text-black">
-                        <img src="certificate/amazon.jpeg" class="w-full h-40 object-cover rounded-md cursor-pointer"
-                            onclick="openPreview('certificate/amazon.jpeg')">
-                        <p class="bg-orange-500 text-white py-2 mt-2 rounded-md">Amazon Web Services</p>
-                    </div>
-
-                    <div class="relative bg-white rounded-lg shadow-lg w-64 p-4 text-center text-black">
-                        <img src="certificate/interpe.jpg" class="w-full h-40 object-cover rounded-md cursor-pointer"
-                            onclick="openPreview('certificate/interpe.jpg')">
-                        <p class="bg-orange-500 text-white py-2 mt-2 rounded-md">Internpe</p>
-                    </div>
-
-                    <div class="relative bg-white rounded-lg shadow-lg w-64 p-4 text-center text-black">
-                        <img src="certificate/brain.jpg" class="w-full h-40 object-cover rounded-md cursor-pointer"
-                            onclick="openPreview('certificate/brain.jpg')">
-                        <p class="bg-orange-500 text-white py-2 mt-2 rounded-md">BrainOvision</p>
-                    </div>
-
-                    <div class="relative bg-white rounded-lg shadow-lg w-64 p-4 text-center text-black">
-                        <img src="certificate/spokenC++.jpg" class="w-full h-40 object-cover rounded-md cursor-pointer"
-                            onclick="openPreview('certificate/spokenC++.jpg')">
-                        <p class="bg-orange-500 text-white py-2 mt-2 rounded-md">Advanced CPP</p>
-                    </div>
-
-                    <div class="relative bg-white rounded-lg shadow-lg w-64 p-4 text-center text-black">
-                        <img src="certificate/gayatri.jpeg" class="w-full h-40 object-cover rounded-md cursor-pointer"
-                            onclick="openPreview('certificate/gayatri.jpeg')">
-                        <p class="bg-orange-500 text-white py-2 mt-2 rounded-md">Hack2Impact</p>
-                    </div>
-
-                    <div class="relative bg-white rounded-lg shadow-lg w-64 p-4 text-center text-black">
-                        <img src="certificate/ciscoC.jpeg" class="w-full h-40 object-cover rounded-md cursor-pointer"
-                            onclick="openPreview('certificate/ciscoC.jpeg')">
-                        <p class="bg-orange-500 text-white py-2 mt-2 rounded-md">Cisco Certified</p>
-                    </div>
-
-                    <div class="relative bg-white rounded-lg shadow-lg w-64 p-4 text-center text-black">
-                        <img src="certificate/clout.jpg" class="w-full h-40 object-cover rounded-md cursor-pointer"
-                            onclick="openPreview('certificate/clout.jpg')">
-                        <p class="bg-orange-500 text-white py-2 mt-2 rounded-md">Cloud Computing</p>
-                    </div>
-
-                    <div class="relative bg-white rounded-lg shadow-lg w-64 p-4 text-center text-black">
-                        <img src="certificate/htmlcss.jpeg" class="w-full h-40 object-cover rounded-md cursor-pointer"
-                            onclick="openPreview('certificate/htmlcss.jpeg')">
-                        <p class="bg-orange-500 text-white py-2 mt-2 rounded-md">It specialist</p>
-                    </div>
-
-                    <div class="relative bg-white rounded-lg shadow-lg w-64 p-4 text-center text-black">
-                        <img src="certificate/redhat.jpg" class="w-full h-40 object-cover rounded-md cursor-pointer"
-                            onclick="openPreview('certificate/redhat.jpg')">
-                        <p class="bg-orange-500 text-white py-2 mt-2 rounded-md">Red hat python</p>
-                    </div>
-                    <div class="relative bg-white rounded-lg shadow-lg w-64 p-4 text-center text-black">
-                        <img src="certificate/edx.jpg" class="w-full h-40 object-cover rounded-md cursor-pointer"
-                            onclick="openPreview('certificate/edx.jpg')">
-                        <p class="bg-orange-500 text-white py-2 mt-2 rounded-md">Edx java</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Fullscreen Preview -->
-        <div id="preview" class="fullscreen">
-            <div class="controls">
-                <a id="downloadLink" download class="bg-blue-500  text-white py-2" >Download</a>
-                <button onclick="closePreview()">✖</button>
-            </div>
-            <img id="previewImg" src="" alt="Certificate">
-        </div>
-  
-<!--  team section -->
-
-        <section class="teams" id="reviews">
-            <div class="max-width">
-                <h2 class="title">What clients say
-                    about my skills</h2>
-                <div class="carousel owl-carousel">
-                    <div class="card">
-                        <div class="box">
-                            <img src="gallary/puspendra.jpg" alt="">
-                            <div class="text">Puspendra Birajee</div>
-                            <p>"Sanjit's coding skills are top-notch! He delivers high-quality frontend solutions efficiently.</p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="box">
-                            <img src="./gallary/sufiyan.jpg" alt="">
-                            <div class="text">Md. Sufiyan</div>
-                            <p>"Very professional and skilled in frontend development. Highly recommended!"</p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="box">
-                            <img src="./gallary/satish.jpg" alt="">
-                            <div class="text">Satish Yadav</div>
-                            <p> Delivers projects on time – Reliable and committed to deadlines.</p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="box">
-                            <img src="./gallary/bhanu.jpg" alt="">
-                            <div class="text">Sai Bhanu Alamuri</div>
-                            <p> Responsive design expert – Ensures websites work perfectly on all devices.</p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="box">
-                            <img src="./gallary/aditya.jpg" alt="">
-                            <div class="text">Aaditya Jha</div>
-                            <p> Excellent communication and teamwork – Works well with teams and understands client needs.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-<!-- Contact Section -->
-<section class="contact py-16 px-6" id="contacts">
-    <div class="max-w-6xl mx-auto">
-        <h2 class="text-5xl font-bold text-white text-center">Contact Me</h2>
-        <div class="flex flex-wrap justify-between mt-10">
-            <!-- Left Section -->
-            <div class="w-full md:w-1/3 space-y-4">
-                <div class="flex items-center space-x-3">
-                    <i class="fas fa-phone text-orange-500"></i>
-                    <span class="text-gray-300">+916303783301 / +9779807058858</span>
-                </div>
-                <div class="flex items-center space-x-3">
-                    <i class="fas fa-envelope text-orange-500"></i>
-                    <span class="text-gray-300">sanjit9842@gmail.com</span>
-                </div>
-                <div class="flex items-center space-x-3">
-                    <i class="fas fa-map-marker-alt text-orange-500"></i>
-                    <span class="text-gray-300">Bhardha, Nepal</span>
-                </div>
-            </div>
-
-            <!-- Right Section (Form) -->
-            <div class="w-full md:w-2/3 bg-slate-950 py-10 px-6 rounded-md">
-                <form id="contact-form" class="space-y-4" onsubmit="sendEmail(event)">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <input type="text" id="name" placeholder="Full Name*" required class="w-full p-3 bg-[#1e1e1e] text-white rounded-md border border-gray-600 focus:outline-none">
-                        <input type="email" id="email" placeholder="Email*" required class="w-full p-3 bg-[#1e1e1e] text-white rounded-md border border-gray-600 focus:outline-none">
-                    </div>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <select id="designation" required class="w-full p-3 bg-[#1e1e1e] text-white rounded-md border border-gray-600 focus:outline-none">
-                            <option value="">Select Designation</option>
-                            <option value="Frontend Developer">Frontend Developer</option>
-                            <option value="Web Developer">Web Developer</option>
-                            <option value="Full Stack Developer">Full Stack Developer</option>
-                        </select>
-                        <input type="text" id="mobile" placeholder="Mobile*" required class="w-full p-3 bg-[#1e1e1e] text-white rounded-md border border-gray-600 focus:outline-none">
-                    </div>
-                    <textarea id="message" placeholder="Message*" required class="w-full p-3 bg-[#1e1e1e] text-white rounded-md border border-gray-600 focus:outline-none"></textarea>
-                    <button type="submit" class="bg-orange-500 hover:bg-fuchsia-700 text-black px-6 py-3 rounded-md font-semibold flex items-center space-x-2">
-                        <span>Send Message</span>
-                        <i class="fas fa-arrow-right"></i>
-                    </button>
-                </form>
-            </div>
-
-
-
-        </div>
-
-        <!-- Footer Section -->
-        <footer class="bg-slate-900 text-white py-10 mt-16">
-            <div class="max-w-6xl mx-auto flex flex-wrap justify-between items-start">
-                <!-- Logo and Social Icons -->
-                <div>
-                    <h2 class="text-xl font-bold"><span class="text-orange-500">S</span>anjit</h2>
-                    <div class="flex space-x-4 mt-3">
-                        <a href="https://www.linkedin.com/in/sanjit-/" class="text-gray-400 hover:text-blue-600"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="https://github.com/Sanjit-dass" class="text-gray-400 hover:text-gray-500"><i class="fab fa-github"></i></a>
-                        <a href="https://www.facebook.com/dassanjitkumar.das"><i class="fa-brands fa-facebook text-blue-600 hover:text-red-500"></i></a>
-                        <a href="https://www.youtube.com/@engineeringbasic94" class="text-gray-400 hover:text-red-500"><i class="fab fa-youtube"></i></a>
-                        <a href="https://api.whatsapp.com/send?phone=916303783301" target="_blank"><i class="fa-brands fa-whatsapp text-green-500 text-xl"></i></a>
-                    </div>
-                </div>
-
-                <!-- Services -->
-                <div>
-                    <h3 class="font-semibold">Services</h3>
-                    <ul class="text-gray-300 space-y-1 mt-2">
-                        <li>Website Designer</li>
-                        <li>Presenting</li>
-                        <li>Developer</li>
-                        <li>Team Management</li>
-                    </ul>
-                </div>
-
-                <!-- Personal Info -->
-                <div>
-                    <h3 class="font-semibold">Personal Info</h3>
-                    <ul class="text-gray-300 space-y-1 mt-2">
-                        <li>+916303783301</li>
-                        <li>sanjit9842@gmail.com</li>
-                        <li>Bhardha, Nepal</li>
-                    </ul>
-                </div>
-
-                <!-- Newsletter -->
-                <div>
-                    <div class="flex">
-                        <input type="email" value="example@gmail.com" class="bg-[#1e1e1e] text-white px-3 py-2 rounded-l-md border border-gray-600 focus:outline-none">
-                        <button class="bg-orange-500 text-black px-4 py-2 rounded-r-md hover:bg-fuchsia-700">Send</button>
-                    </div>
-                    <p class="text-gray-400 mt-2 w-64 py-5">
-                        "If you like my work, feel free to reach out! I'm seeking job opportunities to contribute my skills and grow professionally. Let’s connect!"
-                    </p>
-                </div>
-            </div>
-        </footer>
-    </div>
+  </div>
 </section>
 
 
 
 
-        
 
+    <!-- Education and experiences section -->
+
+   <section id="education" class="bg-slate-900 text-white py-10 font-sans">
+  <div class="max-w-6xl mx-auto px-5">
+
+    <!-- Section Title -->
+    <div class="font-bold text-5xl flex justify-center -mt-8 mb-6 text-center py-16" data-aos="fade-up">
+      <h1>Education And Experience</h1>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+
+      <!-- Education -->
+      <div class="space-y-10" data-aos="fade-right">
+
+        <!-- B.Tech -->
+        <div class="flex items-start space-x-4">
+          <i class="fa-solid fa-graduation-cap text-orange-600 text-3xl"></i>
+          <div>
+            <h3 class="text-2xl font-bold">Bachelor of Technology</h3>
+            <p class="text-gray-400">Aditya University | 2022-2026</p>
+          </div>
+        </div>
+
+        <!-- Intermediate -->
+        <div class="flex items-start space-x-4" data-aos="fade-right" data-aos-delay="100">
+          <i class="fa-solid fa-graduation-cap text-orange-600 text-3xl"></i>
+          <div>
+            <h3 class="text-2xl font-bold">Intermediate</h3>
+            <p class="text-gray-400 w-2/3">
+              Bhanu Memorial English Boarding Secondary School | 2018-2020
+            </p>
+          </div>
+        </div>
+
+        <!-- Schooling -->
+        <div class="flex items-start space-x-4" data-aos="fade-right" data-aos-delay="200">
+          <i class="fa-solid fa-graduation-cap text-orange-600 text-3xl"></i>
+          <div>
+            <h3 class="text-2xl font-bold">Schooling</h3>
+            <p class="text-gray-400">Bal Bodh Secondary School | 2018</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Experience -->
+      <div class="space-y-10" data-aos="fade-left">
+
+        <!-- Java Full Stack Intern -->
+        <div class="flex items-start space-x-4">
+          <i class="fa-solid fa-briefcase text-orange-600 text-3xl"></i>
+          <div>
+            <h3 class="text-2xl font-bold">Java Full Stack Intern</h3>
+            <p class="text-gray-400">BrainOvision Solutions Pvt. Ltd | 2024-2025</p>
+          </div>
+        </div>
+
+        <!-- Web Development -->
+        <div class="flex items-start space-x-4" data-aos="fade-left" data-aos-delay="100">
+          <i class="fa-solid fa-briefcase text-orange-600 text-3xl"></i>
+          <div>
+            <h3 class="text-2xl font-bold">Web Development</h3>
+            <p class="text-gray-400">InternPe | 2024-2025</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+    <!-- project section -->
+
+<section class="projects bg-slate-900 py-10" id="projects">
+  <div class="max-w-screen-lg mx-auto text-center">
+
+    <!-- Section Title -->
+    <h2 class="text-5xl font-bold text-white mb-8" data-aos="fade-up">
+      My Projects
+    </h2>
+
+    <!-- Carousel -->
+    <div class="carousel owl-carousel">
+
+      <!-- Project 1 -->
+      <div class="animated-border hover:shadow-2xl hover:shadow-white border-4 border-transparent" data-aos="zoom-in" data-aos-delay="100">
+        <div class="card bg-gray-800 rounded-lg p-6">
+          <div class="box flex flex-col items-center justify-center">
+            <img src="./images/sanjitmart.jpg" alt="Sanjit Mart"
+              class="w-36 h-36 object-cover transition-all duration-300 ease-in-out hover:border-4 hover:border-white">
+            <div class="text text-xl font-semibold text-white mt-4">Sanjit Mart</div>
+            <p class="text-white mt-2">Developed an e-commerce platform with a variety of products and user functionalities.</p>
+            <a href="https://sanjit-dass.github.io/Summer-Intership-project-3-1/" target="_blank">
+              <button class="bg-purple-800 text-white text-xl rounded-full px-3 py-2 mt-2 hover:bg-fuchsia-700">See Details</button>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="animated-border hover:shadow-2xl hover:shadow-white border-4 border-transparent" data-aos="zoom-in" data-aos-delay="200">
+        <div class="card bg-gray-800 rounded-lg p-6">
+          <div class="box flex flex-col items-center justify-center">
+            <img src="./images/spotify.jpg" alt="Spotify Clone"
+              class="w-36 h-36 object-cover transition-all duration-300 ease-in-out hover:border-4 hover:border-white">
+            <div class="text text-xl font-semibold text-white mt-4">Spotify Clone</div>
+            <p class="text-white mt-2">Created a Spotify clone with user authentication and music streaming features.</p>
+            <a href="https://sanjit-dass.github.io/Spotify_Colon/" target="_blank">
+              <button class="bg-purple-800 text-white text-xl rounded-full px-3 py-2 mt-2 hover:bg-fuchsia-700">See Details</button>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="animated-border hover:shadow-2xl hover:shadow-white border-4 border-transparent" data-aos="zoom-in" data-aos-delay="300">
+        <div class="card bg-gray-800 rounded-lg p-6">
+          <div class="box flex flex-col items-center justify-center">
+            <img src="./images/simon sange.jpg" alt="Simon Says Game"
+              class="w-36 h-36 object-cover transition-all duration-300 ease-in-out hover:border-4 hover:border-white">
+            <div class="text text-xl font-semibold text-white mt-4">Simon Says Game</div>
+            <p class="text-white mt-2">A fun Simon Says game with levels and high scores implemented using JavaScript.</p>
+            <a href="https://sanjit-dass.github.io/Simonsay-games/" target="_blank">
+              <button class="bg-purple-800 text-white text-xl rounded-full px-3 py-2 mt-2 hover:bg-fuchsia-700">See Details</button>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 4 -->
+      <div class="animated-border hover:shadow-2xl hover:shadow-white border-4 border-transparent" data-aos="zoom-in" data-aos-delay="400">
+        <div class="card bg-gray-800 rounded-lg p-6">
+          <div class="box flex flex-col items-center justify-center">
+            <img src="./images/connect4game.jpg" alt="Connect 4 Game"
+              class="w-36 h-36 object-cover transition-all duration-300 ease-in-out hover:border-4 hover:border-white">
+            <div class="text text-xl font-semibold text-white mt-4">Connect 4 Game</div>
+            <p class="text-white mt-2">Build a two-player Connect 4 game using JavaScript and DOM manipulation.</p>
+            <a href="https://sanjit-dass.github.io/Connect-Four-Game/" target="_blank">
+              <button class="bg-purple-800 text-white text-xl rounded-full px-3 py-2 mt-2 hover:bg-fuchsia-700">See Details</button>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 5 -->
+      <div class="animated-border hover:shadow-2xl hover:shadow-white border-4 border-transparent" data-aos="zoom-in" data-aos-delay="500">
+        <div class="card bg-gray-800 rounded-lg p-6">
+          <div class="box flex flex-col items-center justify-center">
+            <img src="./images/reactnest.png" alt="ReactNest"
+              class="w-36 h-36 object-cover transition-all duration-300 ease-in-out hover:border-4 hover:border-white">
+            <div class="text text-xl font-semibold text-white mt-4">ReactNest – Developer Info Hub</div>
+            <p class="text-white mt-2">A developer info hub built with React to explore frameworks, libraries, and tools.</p>
+            <a href="https://react-nest-ochre.vercel.app/" target="_blank">
+              <button class="bg-purple-800 text-white text-xl rounded-full px-3 py-2 mt-2 hover:bg-fuchsia-700">See Details</button>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 6 -->
+      <div class="animated-border hover:shadow-2xl hover:shadow-white border-4 border-transparent" data-aos="zoom-in" data-aos-delay="600">
+        <div class="card bg-gray-800 rounded-lg p-6">
+          <div class="box flex flex-col items-center justify-center">
+            <img src="./images/image.png" alt="PostVault"
+              class="w-36 h-36 object-cover transition-all duration-300 ease-in-out hover:border-4 hover:border-white">
+            <div class="text text-xl font-semibold text-white mt-4">PostVault – Full Stack Blog Application</div>
+            <p class="text-white mt-2">Built a secure blog platform with authentication and rich content management features.</p>
+            <a href="https://post-vault.vercel.app/" target="_blank">
+              <button class="bg-purple-800 text-white text-xl rounded-full px-3 py-2 mt-2 hover:bg-fuchsia-700">See Details</button>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 7 -->
+      <div class="animated-border hover:shadow-2xl hover:shadow-white border-4 border-transparent" data-aos="zoom-in" data-aos-delay="700">
+        <div class="card bg-gray-800 rounded-lg p-6">
+          <div class="box flex flex-col items-center justify-center">
+            <img src="./images/ecommerce.jpg" alt="E-Commerce Website"
+              class="w-36 h-36 object-cover transition-all duration-300 ease-in-out hover:border-4 hover:border-white">
+            <div class="text text-xl font-semibold text-white mt-4">E-Commerce Website</div>
+            <p class="text-white mt-2">Developed an e-commerce website with a user-friendly interface for browsing and purchasing products.</p>
+            <a href="https://sanjit-dass.github.io/mantra_colonperfect/" target="_blank">
+              <button class="bg-purple-800 text-white text-xl rounded-full px-3 py-2 mt-2 hover:bg-fuchsia-700">See Details</button>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+    <!-- services section start -->
+   <section class="services bg-slate-900" id="services">
+  <div class="max-width">
+   <h2 class="title text-4xl font-bold text-white mb-8 no-underline border-0" data-aos="zoom-in" data-aos-delay="300">
+  My Services
+</h2> 
+
+    <div class="serv-content flex flex-wrap justify-center gap-6">
+
+      <!-- Service 1 -->
+      <div class="animated-border hover:shadow-2xl hover:shadow-white border-4 border-transparent w-80 h-72" data-aos="zoom-in" data-aos-delay="400">
+        <div class="card-inner hover:bg-blue-400 h-full flex flex-col items-center justify-center text-center p-6">
+          <i class="fas fa-paint-brush text-4xl text-white mb-4"></i>
+          <div class="text text-xl font-semibold text-white">Website Designer</div>
+          <p class="text-white mt-2">Website Designer Presenting Developer Team Management</p>
+        </div>
+      </div>
+
+      <!-- Service 2 -->
+      <div class="animated-border hover:shadow-2xl hover:shadow-white border-4 border-transparent w-80 h-72" data-aos="zoom-in" data-aos-delay="500">
+        <div class="card-inner hover:bg-blue-400 h-full flex flex-col items-center justify-center text-center p-6">
+          <i class="fas fa-chart-line text-4xl text-white mb-4"></i>
+          <div class="text text-xl font-semibold text-white">Presenting</div>
+          <p class="text-white mt-2">Website Designer Presenting Developer Team Management</p>
+        </div>
+      </div>
+
+      <!-- Service 3 -->
+      <div class="animated-border hover:shadow-2xl hover:shadow-white border-4 border-transparent w-80 h-72" data-aos="zoom-in" data-aos-delay="600">
+        <div class="card-inner hover:bg-blue-400 h-full flex flex-col items-center justify-center text-center p-6">
+          <i class="fas fa-code text-4xl text-white mb-4"></i>
+          <div class="text text-xl font-semibold text-white">Developer</div>
+          <p class="text-white mt-2">Website Designer Presenting Developer Team Management</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+    
+
+    <!-- skills section start -->
+   <section class="skills bg-slate-900 py-16" id="skills">
+  <div class="max-w-screen-lg mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-10 sm:mb-16" data-aos="zoom-in" data-aos-delay="300">
+      Technical Skills
+    </h2>
+    
+    <div class="flex flex-col lg:flex-row gap-10 lg:gap-16">
+      
+      <!-- Left Column -->
+      <div class="left w-full lg:w-1/2 text-center lg:text-left" data-aos="fade-right" data-aos-delay="400">
+        <div class="text-lg sm:text-xl font-semibold text-white mb-4">
+          My technical expertise & experiences.
+        </div>
+        <p class="text-gray-300 text-base sm:text-lg leading-relaxed mb-6">
+          I am a passionate developer with proficiency in multiple programming
+          languages and technologies. I have experience building dynamic websites
+          and applications using modern frameworks and tools.
+        </p>
+        <a href="https://drive.google.com/file/d/1lG1fnLEV1mYHSLCXw5u1Urlc-LuyVnyF/view?usp=sharing"
+           class="text-blue-400 hover:text-blue-600 underline text-sm sm:text-base">Read more</a>
+      </div>
+
+      <!-- Right Column -->
+      <div class="right w-full lg:w-1/2 space-y-6" data-aos="fade-left" data-aos-delay="500">
+
+        <!-- Skill Bar Component -->
+        <div class="bars" data-aos="zoom-in" data-aos-delay="600">
+          <div class="info flex flex-wrap justify-between items-center mb-2 text-sm sm:text-base">
+            <span class="text-white">HTML5, CSS3, Tailwind CSS, Bootstrap, JavaScript</span>
+            <span class="text-white">90%</span>
+          </div>
+          <div class="line w-full h-2 bg-gray-700 rounded-full">
+            <div class="progress h-full bg-red-600 rounded-full" style="width: 90%;"></div>
+          </div>
+        </div>
+
+        <div class="bars" data-aos="zoom-in" data-aos-delay="700">
+          <div class="info flex flex-wrap justify-between items-center mb-2 text-sm sm:text-base">
+            <span class="text-white">C, C++, Python, Java</span>
+            <span class="text-white">80%</span>
+          </div>
+          <div class="line w-full h-2 bg-gray-700 rounded-full">
+            <div class="progress h-full bg-blue-500 rounded-full" style="width: 80%;"></div>
+          </div>
+        </div>
+
+        <div class="bars" data-aos="zoom-in" data-aos-delay="800">
+          <div class="info flex flex-wrap justify-between items-center mb-2 text-sm sm:text-base">
+            <span class="text-white">SQL, OOPS</span>
+            <span class="text-white">70%</span>
+          </div>
+          <div class="line w-full h-2 bg-gray-700 rounded-full">
+            <div class="progress h-full bg-green-500 rounded-full" style="width: 70%;"></div>
+          </div>
+        </div>
+
+        <div class="bars" data-aos="zoom-in" data-aos-delay="900">
+          <div class="info flex flex-wrap justify-between items-center mb-2 text-sm sm:text-base">
+            <span class="text-white">VS Code, Jupyter Notebook, Git, GitHub, Figma</span>
+            <span class="text-white">85%</span>
+          </div>
+          <div class="line w-full h-2 bg-gray-700 rounded-full">
+            <div class="progress h-full bg-purple-500 rounded-full" style="width: 85%;"></div>
+          </div>
+        </div>
+
+        <div class="bars" data-aos="zoom-in" data-aos-delay="1000">
+          <div class="info flex flex-wrap justify-between items-center mb-2 text-sm sm:text-base">
+            <span class="text-white">React.js, Node.js, Express.js, MongoDB</span>
+            <span class="text-white">60%</span>
+          </div>
+          <div class="line w-full h-2 bg-gray-700 rounded-full">
+            <div class="progress h-full bg-yellow-500 rounded-full" style="width: 60%;"></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <!--rewarded  gallary -->
+
+   <div class="bg-slate-900" id="gallary">
+  <h2 class="text-white font-bold mb-4 text-5xl text-center py-9" 
+      data-aos="fade-up" data-aos-delay="200">
+    Gallery
+  </h2>
+
+  <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+
+    <!-- Gallery Images with Animated Border -->
+    <div class="animated-border hover:shadow-2xl hover:shadow-white border-4 border-transparent" data-aos="zoom-in" data-aos-delay="300">
+      <img src="./gallary/tech.jpg" alt="Gallery Image"
+        class="cursor-pointer rounded-lg shadow-lg hover:opacity-80 w-full h-full object-cover"
+        onclick="openImage(this.src)">
+    </div>
+
+    <div class="animated-border hover:shadow-2xl hover:shadow-white border-4 border-transparent" data-aos="zoom-in" data-aos-delay="350">
+      <img src="./gallary/tech-7.jpg" alt="Gallery Image"
+        class="cursor-pointer rounded-lg shadow-lg hover:opacity-80 w-full h-full object-cover"
+        onclick="openImage(this.src)">
+    </div>
+
+    <div class="animated-border hover:shadow-2xl hover:shadow-white border-4 border-transparent" data-aos="zoom-in" data-aos-delay="400">
+      <img src="./gallary/tech-3.jpg" alt="Gallery Image"
+        class="cursor-pointer rounded-lg shadow-lg hover:opacity-80 w-full h-full object-cover"
+        onclick="openImage(this.src)">
+    </div>
+
+    <div class="animated-border hover:shadow-2xl hover:shadow-white border-4 border-transparent" data-aos="zoom-in" data-aos-delay="450">
+      <img src="./gallary/tech-4.jpg" alt="Gallery Image"
+        class="cursor-pointer rounded-lg shadow-lg hover:opacity-80 w-full h-full object-cover"
+        onclick="openImage(this.src)">
+    </div>
+
+    <div class="animated-border hover:shadow-2xl hover:shadow-white border-4 border-transparent" data-aos="zoom-in" data-aos-delay="500">
+      <img src="./gallary/tech-11.jpg" alt="Gallery Image"
+        class="cursor-pointer rounded-lg shadow-lg hover:opacity-80 w-full h-full object-cover"
+        onclick="openImage(this.src)">
+    </div>
+
+    <div class="animated-border hover:shadow-2xl hover:shadow-white border-4 border-transparent" data-aos="zoom-in" data-aos-delay="550">
+      <img src="./gallary/tech-6.jpg" alt="Gallery Image"
+        class="cursor-pointer rounded-lg shadow-lg hover:opacity-80 w-full h-full object-cover"
+        onclick="openImage(this.src)">
+    </div>
+
+    <div class="animated-border hover:shadow-2xl hover:shadow-white border-4 border-transparent" data-aos="zoom-in" data-aos-delay="600">
+      <img src="./gallary/tech-7.jpg" alt="Gallery Image"
+        class="cursor-pointer rounded-lg shadow-lg hover:opacity-80 w-full h-full object-cover"
+        onclick="openImage(this.src)">
+    </div>
+
+    <div class="animated-border hover:shadow-2xl hover:shadow-white border-4 border-transparent" data-aos="zoom-in" data-aos-delay="650">
+      <img src="./gallary/9.jpg" alt="Gallery Image"
+        class="cursor-pointer rounded-lg shadow-lg hover:opacity-80 w-full h-full object-cover"
+        onclick="openImage(this.src)">
+    </div>
+
+    <!-- For fixed sizes -->
+    <div class="animated-border hover:shadow-2xl hover:shadow-white border-4 border-transparent" data-aos="zoom-in" data-aos-delay="700">
+      <img src="./gallary/tech2.jpg" alt="Gallery Image"
+        class="cursor-pointer rounded-lg shadow-lg hover:opacity-80 h-60 w-80 object-cover"
+        onclick="openImage(this.src)">
+    </div>
+
+    <div class="animated-border hover:shadow-2xl hover:shadow-white border-4 border-transparent" data-aos="zoom-in" data-aos-delay="750">
+      <img src="./gallary/tech-5.jpg" alt="Gallery Image"
+        class="cursor-pointer rounded-lg shadow-lg hover:opacity-80 h-60 object-cover"
+        onclick="openImage(this.src)">
+    </div>
+
+    <div class="animated-border hover:shadow-2xl hover:shadow-white border-4 border-transparent" data-aos="zoom-in" data-aos-delay="800">
+      <img src="./gallary/8.jpg" alt="Gallery Image"
+        class="cursor-pointer rounded-lg shadow-lg hover:opacity-80 h-60 w-80 object-cover"
+        onclick="openImage(this.src)">
+    </div>
+
+    <div class="animated-border hover:shadow-2xl hover:shadow-white border-4 border-transparent" data-aos="zoom-in" data-aos-delay="850">
+      <img src="./gallary/tech-12.jpg" alt="Gallery Image"
+        class="cursor-pointer rounded-lg shadow-lg hover:opacity-80 h-60 w-80 object-cover"
+        onclick="openImage(this.src)">
+    </div>
+
+  </div>
+</div>
+
+<!-- Fullscreen Image Viewer -->
+<div id="fullscreenViewer"
+    class="fixed inset-0 bg-black bg-opacity-90 flex flex-col items-center justify-center hidden">
+  <div class="absolute top-5 right-5 flex gap-3">
+      <a id="downloadImage" class="text-white bg-red-700 px-3 py-3 rounded text-sm hover:bg-gray-600" download>Download</a>
+      <button class="text-white text-lg" onclick="closeImage()">✖</button>
+  </div>
+  <img id="fullscreenImage" class="max-w-full max-h-full rounded-lg">
+</div>
+
+
+
+
+
+    <!-- Certificate section -->
+<div class="bg-slate-900" id="certificate">
+  <h2 class="text-white font-bold mb-4 text-5xl text-center py-9" 
+      data-aos="fade-up" data-aos-delay="200">
+    Certifications
+  </h2>
+
+  <div class="slider-wrapper overflow-hidden relative">
+    <div class="slider-track flex gap-6 animate-slideRight">
+      <!-- Certificate Items (Original + Duplicate for infinite scroll) -->
+      <div class="animated-border hover:shadow-2xl hover:shadow-white border-4 border-transparent" data-aos="zoom-in" data-aos-delay="300">
+        <div class="bg-white rounded-lg shadow-lg w-64 p-4 text-center text-black">
+          <img src="certificate/innovix.jpg" class="w-full h-40 object-cover rounded-md cursor-pointer"
+               onclick="openPreview('certificate/innovix.jpg')">
+          <p class="bg-orange-500 text-white py-2 mt-2 rounded-md">Innovix Certified</p>
+        </div>
+      </div>
+      <div class="animated-border hover:shadow-2xl hover:shadow-white border-4 border-transparent" data-aos="zoom-in" data-aos-delay="350">
+        <div class="bg-white rounded-lg shadow-lg w-64 p-4 text-center text-black">
+          <img src="certificate/Python1.jpeg" class="w-full h-40 object-cover rounded-md cursor-pointer"
+               onclick="openPreview('certificate/Python1.jpeg')">
+          <p class="bg-orange-500 text-white py-2 mt-2 rounded-md">Python Certified</p>
+        </div>
+      </div>
+      <div class="animated-border hover:shadow-2xl hover:shadow-white border-4 border-transparent" data-aos="zoom-in" data-aos-delay="400">
+        <div class="bg-white rounded-lg shadow-lg w-64 p-4 text-center text-black">
+          <img src="certificate/python-2.jpg" class="w-full h-40 object-cover rounded-md cursor-pointer"
+               onclick="openPreview('certificate/python-2.jpg')">
+          <p class="bg-orange-500 text-white py-2 mt-2 rounded-md">Python Advanced</p>
+        </div>
+      </div>
+      <div class="animated-border hover:shadow-2xl hover:shadow-white border-4 border-transparent" data-aos="zoom-in" data-aos-delay="450">
+        <div class="bg-white rounded-lg shadow-lg w-64 p-4 text-center text-black">
+          <img src="certificate/amazon.jpeg" class="w-full h-40 object-cover rounded-md cursor-pointer"
+               onclick="openPreview('certificate/amazon.jpeg')">
+          <p class="bg-orange-500 text-white py-2 mt-2 rounded-md">Amazon Web Services</p>
+        </div>
+      </div>
+
+      <!-- Duplicate items for seamless scrolling -->
+      <div class="animated-border hover:shadow-2xl hover:shadow-white border-4 border-transparent">
+        <div class="bg-white rounded-lg shadow-lg w-64 p-4 text-center text-black">
+          <img src="certificate/innovix.jpg" class="w-full h-40 object-cover rounded-md cursor-pointer"
+               onclick="openPreview('certificate/innovix.jpg')">
+          <p class="bg-orange-500 text-white py-2 mt-2 rounded-md">Innovix Certified</p>
+        </div>
+      </div>
+      <div class="animated-border hover:shadow-2xl hover:shadow-white border-4 border-transparent">
+        <div class="bg-white rounded-lg shadow-lg w-64 p-4 text-center text-black">
+          <img src="certificate/Python1.jpeg" class="w-full h-40 object-cover rounded-md cursor-pointer"
+               onclick="openPreview('certificate/Python1.jpeg')">
+          <p class="bg-orange-500 text-white py-2 mt-2 rounded-md">Python Certified</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Fullscreen Preview -->
+  <div id="preview" class="fullscreen fixed inset-0 bg-black bg-opacity-90 flex flex-col items-center justify-center hidden">
+    <div class="absolute top-5 right-5 flex gap-3">
+      <a id="downloadLink" download class="bg-blue-500 text-white py-2 px-3 rounded-md hover:bg-blue-600">Download</a>
+      <button onclick="closePreview()" class="text-white text-lg">✖</button>
+    </div>
+    <img id="previewImg" src="" alt="Certificate" class="rounded-lg max-h-[90%]">
+  </div>
+</div>
+
+  
+<!--
+  team section -->
+
+      <section class="teams bg-slate-900 " id="reviews">
+  <div class="max-width">
+    <h2 class="title no-underline" data-aos="fade-up" data-aos-delay="200">
+      What clients say about my skills
+    </h2>
+    <div class="carousel owl-carousel">
+
+      <!-- Testimonial 1 -->
+      <div class="animated-border  hover:shadow-2xl hover:shadow-white border-4 border-transparent" data-aos="zoom-in" data-aos-delay="300">
+        <div class="card">
+          <div class="box">
+            <img src="gallary/puspendra.jpg" alt="">
+            <div class="text">Puspendra Birajee</div>
+            <p>"Sanjit's coding skills are top-notch! He delivers high-quality frontend solutions efficiently."</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonial 2 -->
+      <div class="animated-border hover:shadow-2xl hover:shadow-white border-4 border-transparent" data-aos="zoom-in" data-aos-delay="400">
+        <div class="card">
+          <div class="box">
+            <img src="./gallary/sufiyan.jpg" alt="">
+            <div class="text">Md. Sufiyan</div>
+            <p>"Very professional and skilled in frontend development. Highly recommended!"</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonial 3 -->
+      <div class="animated-border hover:shadow-2xl hover:shadow-white border-4 border-transparent" data-aos="zoom-in" data-aos-delay="500">
+        <div class="card">
+          <div class="box">
+            <img src="./gallary/satish.jpg" alt="">
+            <div class="text">Satish Yadav</div>
+            <p>Delivers projects on time – Reliable and committed to deadlines.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonial 4 -->
+      <div class="animated-border hover:shadow-2xl hover:shadow-white border-4 border-transparent" data-aos="zoom-in" data-aos-delay="600">
+        <div class="card">
+          <div class="box">
+            <img src="./gallary/bhanu.jpg" alt="">
+            <div class="text">Sai Bhanu Alamuri</div>
+            <p>Responsive design expert – Ensures websites work perfectly on all devices.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonial 5 -->
+      <div class="animated-border hover:shadow-2xl hover:shadow-white border-4 border-transparent" data-aos="zoom-in" data-aos-delay="700">
+        <div class="card">
+          <div class="box">
+            <img src="./gallary/aditya.jpg" alt="">
+            <div class="text">Aaditya Jha</div>
+            <p>Excellent communication and teamwork – Works well with teams and understands client needs.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- Contact Section -->
+<section class="contact py-16 px-6 bg-slate-900" id="contacts">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-5xl font-bold text-white text-center" 
+        data-aos="fade-up" data-aos-delay="200">
+      Contact Me
+    </h2>
+
+    <div class="flex flex-wrap justify-between mt-10">
+      <!-- Left Section -->
+      <div class="w-full md:w-1/3 space-y-4" 
+           data-aos="fade-right" data-aos-delay="300" data-aos-duration="1000">
+        <div class="flex items-center space-x-3" data-aos="zoom-in" data-aos-delay="350">
+          <i class="fas fa-phone text-orange-500"></i>
+          <span class="text-gray-300">+916303783301</span>
+        </div>
+         <div class="flex items-center space-x-3" data-aos="zoom-in" data-aos-delay="350">
+          <i class="fas fa-phone text-orange-500"></i>
+          <span class="text-gray-300">+9779807058858</span>
+        </div>
+        <div class="flex items-center space-x-3" data-aos="zoom-in" data-aos-delay="400">
+          <i class="fas fa-envelope text-orange-500"></i>
+          <span class="text-gray-300">sanjit9842@gmail.com</span>
+        </div>
+        <div class="flex items-center space-x-3" data-aos="zoom-in" data-aos-delay="450">
+          <i class="fas fa-map-marker-alt text-orange-500"></i>
+          <span class="text-gray-300">Bhardha, Nepal</span>
+        </div>
+      </div>
+
+      <!-- Right Section (Form) -->
+      <div class="w-full md:w-2/3 bg-slate-900 py-10 px-6 rounded-md" 
+           data-aos="fade-left" data-aos-delay="500" data-aos-duration="1000">
+        <form id="contact-form" class="space-y-4 bg-slate-800 p-6 rounded-md shadow-md" 
+              method="POST" action="https://api.web3forms.com/submit">
+          <input type="hidden" name="access_key" value="ebd875ce-ff0e-4646-9902-d41c455dc80e">
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <input type="text" name="name" placeholder="Full Name*" required
+                   class="w-full p-3 bg-slate-900 text-white rounded-md border border-gray-600 focus:outline-none"
+                   data-aos="fade-up" data-aos-delay="550">
+            <input type="email" name="email" placeholder="Email*" required
+                   class="w-full p-3 bg-slate-900 text-white rounded-md border border-gray-600 focus:outline-none"
+                   data-aos="fade-up" data-aos-delay="600">
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <select name="designation" required
+                    class="w-full p-3 bg-slate-900 text-white rounded-md border border-gray-600 focus:outline-none"
+                    data-aos="fade-up" data-aos-delay="650">
+              <option value="">Select Designation</option>
+              <option value="Frontend Developer">Frontend Developer</option>
+              <option value="Web Developer">Web Developer</option>
+              <option value="Full Stack Developer">Full Stack Developer</option>
+            </select>
+            <input type="text" name="mobile" placeholder="Mobile*" required
+                   class="w-full p-3 bg-slate-900 text-white rounded-md border border-gray-600 focus:outline-none"
+                   data-aos="fade-up" data-aos-delay="700">
+          </div>
+
+          <textarea name="message" placeholder="Message*" required
+                    class="w-full p-3 bg-slate-900 text-white rounded-md border border-gray-600 focus:outline-none"
+                    data-aos="fade-up" data-aos-delay="750"></textarea>
+
+    <button type="submit"
+    class="bg-gradient-to-r from-purple-600 via-pink-500 to-red-500 
+           hover:from-red-500 hover:via-pink-500 hover:to-purple-600 
+           text-white px-6 py-3 rounded-md font-semibold flex items-center space-x-2 
+           transform transition-transform duration-300 ease-in-out hover:scale-105 animate-gradient group">
+    <span>Send Message</span>
+    <i class="fas fa-arrow-right transform transition-transform duration-300 ease-in-out group-hover:translate-x-2"></i>
+</button>
+
+
+          <p id="form-status" class="mt-2 text-center text-green-400" data-aos="fade-up" data-aos-delay="850"></p>
+        </form>
+      </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="bg-slate-900 text-white py-10 mt-16">
+      <div class="max-w-6xl mx-auto flex flex-wrap justify-between items-start">
+        <div data-aos="zoom-in" data-aos-delay="900">
+          <h2 class="text-xl font-bold"><span class="text-orange-500">S</span>anjit</h2>
+          <div class="flex space-x-4 mt-3">
+            <a href="#" class="text-gray-400 hover:text-blue-600"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="text-gray-400 hover:text-gray-500"><i class="fab fa-github"></i></a>
+            <a href="#" class="text-blue-600 hover:text-red-500"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#" class="text-gray-400 hover:text-red-500"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fa-brands fa-whatsapp text-green-500 text-xl"></i></a>
+          </div>
+        </div>
+
+        <div data-aos="fade-up" data-aos-delay="950">
+          <h3 class="font-semibold">Services</h3>
+          <ul class="text-gray-300 space-y-1 mt-2">
+            <li>Website Designer</li>
+            <li>Presenting</li>
+            <li>Developer</li>
+            <li>Team Management</li>
+          </ul>
+        </div>
+
+        <div data-aos="fade-up" data-aos-delay="1000">
+          <h3 class="font-semibold">Personal Info</h3>
+          <ul class="text-gray-300 space-y-1 mt-2">
+            <li>+916303783301</li>
+              <li>+9779807058858</li>
+            <li>sanjit9842@gmail.com</li>
+            <li>Bhardha, Nepal</li>
+          </ul>
+        </div>
+
+        <div data-aos="fade-up" data-aos-delay="1050">
+          <div class="flex">
+            <input type="email" value="example@gmail.com"
+                   class="bg-[#1e1e1e] text-white px-3 py-2 rounded-l-md border border-gray-600 focus:outline-none">
+            <button class="bg-orange-500 text-black px-4 py-2 rounded-r-md hover:bg-fuchsia-700">Send</button>
+          </div>
+          <p class="text-gray-400 mt-2 w-64 py-5">
+            "If you like my work, feel free to reach out! I'm seeking job opportunities to contribute my skills and grow professionally. Let’s connect!"
+          </p>
+        </div>
+      </div>
+    </footer>
+  </div>
+</section>
 
         <!-- footer section start -->
-        <footer class="text-center p-4 bg-gray-800 text-white">
-            <span>
-                Created By
-                <a href="#" class="text-blue-400 hover:underline">Sanjit Das</a>
-                | <i class="far fa-copyright"></i> 2025 All rights reserved.
-            </span>
-        </footer>
+        <footer class="text-center p-4 bg-slate-800 text-white" >
+    <span>
+        Created By 
+        <a href="#" class="text-blue-400 hover:underline">Sanjit Das</a>
+        | <i class="far fa-copyright"></i> 2025 All rights reserved.
+    </span>
+</footer>
+
+         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000, // animation duration
+      once: true, // animate only once
+    });
+  </script>
 
         <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
         <script src="script.js"></script>

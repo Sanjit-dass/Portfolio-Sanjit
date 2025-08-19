@@ -431,16 +431,6 @@ section .title::after{
     100% { transform: rotate(360deg); }
 }
 
-@keyframes borderAnimation {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-.animate-border {
-  background-size: 200% 200%;
-  animation: borderAnimation 4s linear infinite;
-}
 
 
 /* // */
@@ -670,9 +660,9 @@ section .title::after{
 .slider-track { display: flex; gap: 1.5rem; }
 @keyframes slideRight {
   0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); } /* Moves continuously left */
+  100% { transform: translateX(-50%); }
 }
-.animate-slideRight { animation: slideRight 10s linear infinite; }
+.animate-slideRight { animation: slideRight 2s linear infinite; }
 
 
 /* contact section styling */

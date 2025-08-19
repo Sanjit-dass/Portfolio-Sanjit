@@ -64,7 +64,7 @@
     <!-- Gradient Border Animation -->
     <div class="absolute inset-0 rounded-full p-[4px] animate-border-spin 
                 bg-gradient-to-r from-green-800 via-blue-700 via-indigo-600  to-red-700 shadow-2xl shadow-indigo-600">
-      
+      <!-- Profile Image -->
       <img src="./images/s1.jpg" alt="Profile"
            class="w-full h-full object-cover rounded-full border-4 border-transparent shadow-2xl" />
     </div>
@@ -585,59 +585,141 @@
 
 
     <!-- Certificate section -->
-<div class="bg-slate-900" id="certificate">
-  <h2 class="text-white font-bold mb-4 text-5xl text-center py-9" 
-      data-aos="fade-up" data-aos-delay="200">
+<div class="bg-slate-900 py-12" id="certificate">
+  <h2 class="text-white font-bold mb-8 text-5xl text-center" data-aos="fade-up" data-aos-delay="200">
     Certifications
   </h2>
 
-  <div class="slider-wrapper overflow-hidden relative">
-    <div class="slider-track flex gap-6 animate-slideRight">
-      <!-- Certificate Items (Original + Duplicate for infinite scroll) -->
-      <div class="animated-border hover:shadow-2xl hover:shadow-white border-4 border-transparent" data-aos="zoom-in" data-aos-delay="300">
+  <!-- Slider wrapper -->
+  <div class="overflow-x-auto">
+    <div class="flex gap-6 w-max px-6">
+      
+      <!-- Certificate 1 -->
+      <div class="animated-border hover:shadow-2xl border-4 border-transparent flex-shrink-0">
         <div class="bg-white rounded-lg shadow-lg w-64 p-4 text-center text-black">
-          <img src="certificate/innovix.jpg" class="w-full h-40 object-cover rounded-md cursor-pointer"
+          <img src="certificate/innovix.jpg" class="w-full h-40 object-cover rounded-md cursor-pointer" 
                onclick="openPreview('certificate/innovix.jpg')">
           <p class="bg-orange-500 text-white py-2 mt-2 rounded-md">Innovix Certified</p>
         </div>
       </div>
-      <div class="animated-border hover:shadow-2xl hover:shadow-white border-4 border-transparent" data-aos="zoom-in" data-aos-delay="350">
+
+      <!-- Certificate 2 -->
+      <div class="animated-border hover:shadow-2xl border-4 border-transparent flex-shrink-0">
         <div class="bg-white rounded-lg shadow-lg w-64 p-4 text-center text-black">
-          <img src="certificate/Python1.jpeg" class="w-full h-40 object-cover rounded-md cursor-pointer"
+          <img src="certificate/Python1.jpeg" class="w-full h-40 object-cover rounded-md cursor-pointer" 
                onclick="openPreview('certificate/Python1.jpeg')">
           <p class="bg-orange-500 text-white py-2 mt-2 rounded-md">Python Certified</p>
         </div>
       </div>
-      <div class="animated-border hover:shadow-2xl hover:shadow-white border-4 border-transparent" data-aos="zoom-in" data-aos-delay="400">
+
+      <!-- Certificate 3 -->
+      <div class="animated-border hover:shadow-2xl border-4 border-transparent flex-shrink-0">
         <div class="bg-white rounded-lg shadow-lg w-64 p-4 text-center text-black">
-          <img src="certificate/python-2.jpg" class="w-full h-40 object-cover rounded-md cursor-pointer"
+          <img src="certificate/python-2.jpg" class="w-full h-40 object-cover rounded-md cursor-pointer" 
                onclick="openPreview('certificate/python-2.jpg')">
           <p class="bg-orange-500 text-white py-2 mt-2 rounded-md">Python Advanced</p>
         </div>
       </div>
-      <div class="animated-border hover:shadow-2xl hover:shadow-white border-4 border-transparent" data-aos="zoom-in" data-aos-delay="450">
+
+      <!-- Certificate 4 -->
+      <div class="animated-border hover:shadow-2xl border-4 border-transparent flex-shrink-0">
         <div class="bg-white rounded-lg shadow-lg w-64 p-4 text-center text-black">
-          <img src="certificate/amazon.jpeg" class="w-full h-40 object-cover rounded-md cursor-pointer"
+          <img src="certificate/amazon.jpeg" class="w-full h-40 object-cover rounded-md cursor-pointer" 
                onclick="openPreview('certificate/amazon.jpeg')">
           <p class="bg-orange-500 text-white py-2 mt-2 rounded-md">Amazon Web Services</p>
         </div>
       </div>
 
-      <!-- Duplicate items for seamless scrolling -->
-      <div class="animated-border hover:shadow-2xl hover:shadow-white border-4 border-transparent">
+      <!-- Certificate 5 -->
+      <div class="animated-border hover:shadow-2xl border-4 border-transparent flex-shrink-0">
         <div class="bg-white rounded-lg shadow-lg w-64 p-4 text-center text-black">
-          <img src="certificate/innovix.jpg" class="w-full h-40 object-cover rounded-md cursor-pointer"
-               onclick="openPreview('certificate/innovix.jpg')">
-          <p class="bg-orange-500 text-white py-2 mt-2 rounded-md">Innovix Certified</p>
+          <img src="certificate/CourseSera Html & JS.png" class="w-full h-40 object-cover rounded-md cursor-pointer" 
+               onclick="openPreview('certificate/CourseSera Html & JS.png')">
+          <p class="bg-orange-500 text-white py-2 mt-2 rounded-md">CourseSera Html & JS</p>
         </div>
       </div>
-      <div class="animated-border hover:shadow-2xl hover:shadow-white border-4 border-transparent">
+
+      <!-- Certificate 6 -->
+      <div class="animated-border hover:shadow-2xl border-4 border-transparent flex-shrink-0">
         <div class="bg-white rounded-lg shadow-lg w-64 p-4 text-center text-black">
-          <img src="certificate/Python1.jpeg" class="w-full h-40 object-cover rounded-md cursor-pointer"
-               onclick="openPreview('certificate/Python1.jpeg')">
-          <p class="bg-orange-500 text-white py-2 mt-2 rounded-md">Python Certified</p>
+          <img src="certificate/CourseSera Cryptography.png" class="w-full h-40 object-cover rounded-md cursor-pointer" 
+               onclick="openPreview('certificate/CourseSera Cryptography.png')">
+          <p class="bg-orange-500 text-white py-2 mt-2 rounded-md">CourseSera Cryptography</p>
         </div>
       </div>
+
+      <!-- Certificate 7 -->
+      <div class="animated-border hover:shadow-2xl border-4 border-transparent flex-shrink-0">
+        <div class="bg-white rounded-lg shadow-lg w-64 p-4 text-center text-black">
+          <img src="certificate/NPTEL Cloud Computing.png" class="w-full h-40 object-cover rounded-md cursor-pointer" 
+               onclick="openPreview('certificate/NPTEL Cloud Computing.png')">
+          <p class="bg-orange-500 text-white py-2 mt-2 rounded-md">NPTEL Cloud Computing</p>
+        </div>
+      </div>
+
+      <!-- Certificate 8 -->
+      <div class="animated-border hover:shadow-2xl border-4 border-transparent flex-shrink-0">
+        <div class="bg-white rounded-lg shadow-lg w-64 p-4 text-center text-black">
+          <img src="certificate/Red Hat Python.png" class="w-full h-40 object-cover rounded-md cursor-pointer" 
+               onclick="openPreview('certificate/Red Hat Python.png')">
+          <p class="bg-orange-500 text-white py-2 mt-2 rounded-md">Red Hat Python</p>
+        </div>
+      </div>
+
+      <!-- Certificate 9 -->
+      <div class="animated-border hover:shadow-2xl border-4 border-transparent flex-shrink-0">
+        <div class="bg-white rounded-lg shadow-lg w-64 p-4 text-center text-black">
+          <img src="certificate/Code Carnival.png" class="w-full h-40 object-cover rounded-md cursor-pointer" 
+               onclick="openPreview('certificate/Code Carnival.png')">
+          <p class="bg-orange-500 text-white py-2 mt-2 rounded-md">Code Carnival</p>
+        </div>
+      </div>
+
+      <!-- Certificate 10 -->
+      <div class="animated-border hover:shadow-2xl border-4 border-transparent flex-shrink-0">
+        <div class="bg-white rounded-lg shadow-lg w-64 p-4 text-center text-black">
+          <img src="certificate/Java Programming Fundamental.png" class="w-full h-40 object-cover rounded-md cursor-pointer" 
+               onclick="openPreview('certificate/Java Programming Fundamental.png')">
+          <p class="bg-orange-500 text-white py-2 mt-2 rounded-md">Java Programming Fundamental</p>
+        </div>
+      </div>
+
+      <!-- Certificate 11 -->
+      <div class="animated-border hover:shadow-2xl border-4 border-transparent flex-shrink-0">
+        <div class="bg-white rounded-lg shadow-lg w-64 p-4 text-center text-black">
+          <img src="certificate/GeeksForGeeks.png" class="w-full h-40 object-cover rounded-md cursor-pointer" 
+               onclick="openPreview('certificate/GeeksForGeeks.png')">
+          <p class="bg-orange-500 text-white py-2 mt-2 rounded-md">GeeksForGeeks</p>
+        </div>
+      </div>
+
+      <!-- Certificate 12 -->
+      <div class="animated-border hover:shadow-2xl border-4 border-transparent flex-shrink-0">
+        <div class="bg-white rounded-lg shadow-lg w-64 p-4 text-center text-black">
+          <img src="certificate/interpe.jpg" class="w-full h-40 object-cover rounded-md cursor-pointer" 
+               onclick="openPreview('certificate/interpe.jpg')">
+          <p class="bg-orange-500 text-white py-2 mt-2 rounded-md">Interpersonal Skills</p>
+        </div>
+      </div>
+
+      <!-- Certificate 13 -->
+      <div class="animated-border hover:shadow-2xl border-4 border-transparent flex-shrink-0">
+        <div class="bg-white rounded-lg shadow-lg w-64 p-4 text-center text-black">
+          <img src="certificate/NPTEL IOT.png" class="w-full h-40 object-cover rounded-md cursor-pointer" 
+               onclick="openPreview('certificate/NPTEL IOT.png')">
+          <p class="bg-orange-500 text-white py-2 mt-2 rounded-md">NPTEL IOT</p>
+        </div>
+      </div>
+
+      <!-- Certificate 14 -->
+      <div class="animated-border hover:shadow-2xl border-4 border-transparent flex-shrink-0">
+        <div class="bg-white rounded-lg shadow-lg w-64 p-4 text-center text-black">
+          <img src="certificate/BrainOvision JavaFull Stack.png" class="w-full h-40 object-cover rounded-md cursor-pointer" 
+               onclick="openPreview('certificate/BrainOvision JavaFull Stack.png')">
+          <p class="bg-orange-500 text-white py-2 mt-2 rounded-md">BrainOvision JavaFull Stack</p>
+        </div>
+      </div>
+
     </div>
   </div>
 
@@ -650,6 +732,7 @@
     <img id="previewImg" src="" alt="Certificate" class="rounded-lg max-h-[90%]">
   </div>
 </div>
+
 
   
 <!--

@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <!-- Homepage -->
+  <url>
+    <loc>https://sanjitdas.com.np/</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.00</priority>
+    <image:image>
+      <image:loc>https://sanjitdas.com.np/images/sanjitPhoto.jpeg</image:loc>
+      <image:caption>Sanjit Das — Full Stack Developer</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Core pages -->
+  <url>
+    <loc>https://sanjitdas.com.np/about.html</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+  </url>
+
+  <url>
+    <loc>https://sanjitdas.com.np/projects.html</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <url>
+    <loc>https://sanjitdas.com.np/services.html</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+  </url>
+
+  <url>
+    <loc>https://sanjitdas.com.np/blog.html</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://sanjitdas.com.np/contact.html</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+  </url>
+
+  <!-- Project pages -->
+  <url>
+    <loc>https://sanjitdas.com.np/projects/complaintpro.html</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://sanjitdas.com.np/images/complaintpro.png</image:loc>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://sanjitdas.com.np/projects/connect-four.html</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <image:image>
+      <image:loc>https://sanjitdas.com.np/images/connect4game.jpg</image:loc>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://sanjitdas.com.np/projects/jobportal.html</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://sanjitdas.com.np/images/jobportal.png</image:loc>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://sanjitdas.com.np/projects/personal-ai-assistant.html</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <image:image>
+      <image:loc>https://sanjitdas.com.np/images/aiassistant.png</image:loc>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://sanjitdas.com.np/projects/postvault.html</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <image:image>
+      <image:loc>https://sanjitdas.com.np/images/postvault.png</image:loc>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://sanjitdas.com.np/projects/sanjit-mart.html</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://sanjitdas.com.np/images/sanjitmart.jpg</image:loc>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://sanjitdas.com.np/projects/simon-says.html</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+    <image:image>
+      <image:loc>https://sanjitdas.com.np/images/simon%20sange.jpg</image:loc>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://sanjitdas.com.np/projects/spotify-clone.html</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <image:image>
+      <image:loc>https://sanjitdas.com.np/images/spotify.jpg</image:loc>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://sanjitdas.com.np/projects/storefront.html</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <image:image>
+      <image:loc>https://sanjitdas.com.np/images/ecommerce.jpg</image:loc>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://sanjitdas.com.np/projects/projects/smartshop.html</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+    <image:image>
+      <image:loc>https://sanjitdas.com.np/images/smartshop.png</image:loc>
+    </image:image>
+  </url>
+
+  <!-- Utility pages -->
+  <url>
+    <loc>https://sanjitdas.com.np/form.html</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.40</priority>
+  </url>
+
+  <url>
+    <loc>https://sanjitdas.com.np/404.html</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.10</priority>
+  </url>
+
+  <url>
+    <loc>https://sanjitdas.com.np/privacy-policy.html</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.30</priority>
+  </url>
+
+  <url>
+    <loc>https://sanjitdas.com.np/terms.html</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.30</priority>
+  </url>
+
+</urlset>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanjit Mart — Case study | Sanjit Das</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body class="project-detail">
+    <div class="detail-wrap">
+        <a class="detail-back" href="../index.html#projects">← Back to projects</a>
+        <img class="detail-cover" src="../images/sanjitmart.jpg" alt="Sanjit Mart storefront preview">
+        <h1 class="detail-title">Sanjit Mart</h1>
+        <p class="detail-tagline">A practice e-commerce experience focused on catalog browsing, product presentation, and a clear path to checkout-style actions — structured like a real storefront without relying on a heavy framework.</p>
+
+        <section class="detail-section">
+            <h2>Context &amp; goals</h2>
+            <p>Sanjit Mart was scoped as a portfolio-grade practice build: prove I could carry a multi-page shopping flow from empty repo to a deployable demo. The goal was not only pixel polish but also predictable information architecture — shoppers should always know where they are, how to move between categories, and what happens after they tap “add” or open a product.</p>
+            <p>I treated accessibility and keyboard focus as first-class concerns where the stack allowed it, because those details are what separate a student layout from something a team could iterate on.</p>
+        </section>
+
+        <section class="detail-section">
+            <h2>Approach</h2>
+            <p>I started from low-fidelity structure: semantic regions for header, navigation, main catalog, and footer, then layered visual hierarchy with typography scale and restrained accent color. Grids were defined with CSS so the same markup scales from two-column mobile layouts to wider multi-card rows without one-off breakpoints everywhere.</p>
+            <p>Product cards share one pattern — image ratio, title, price, and action — so extending the catalog is mostly content work. That consistency also made hover and focus states easier to test systematically.</p>
+        </section>
+
+        <section class="detail-section">
+            <h2>What I shipped</h2>
+            <ul class="detail-list">
+                <li>Responsive product grid with category navigation and clear active states</li>
+                <li>Product detail views with imagery, descriptive blocks, and scannable specs</li>
+                <li>Cart-style interactions with visible feedback (disabled buttons, counts, microcopy)</li>
+                <li>Reusable HTML patterns and CSS utilities to avoid duplicated layout rules</li>
+                <li>Static hosting on GitHub Pages with paths that work for shared demos and résumé links</li>
+            </ul>
+        </section>
+
+        <section class="detail-section">
+            <h2>Tech &amp; constraints</h2>
+            <p>HTML, CSS, and vanilla JavaScript on top of GitHub Pages. Without a bundler, I kept file structure flat and documented assumptions in comments so the project stays approachable for reviewers cloning the repo cold.</p>
+        </section>
+
+        <section class="detail-section">
+            <h2>Results &amp; lessons</h2>
+            <p>The finished demo reads as a coherent shop: navigation does not dead-end, imagery is cropped consistently, and spacing follows a single rhythm. The biggest lesson was front-loading layout tokens (spacing, radii, type sizes) — doing that early prevented a late-stage refactor when the product grid grew.</p>
+            <p>If I extended this next, I would add a lightweight cart model in JavaScript (persisted to <code>localStorage</code>) and stub checkout validation, then optionally swap the static JSON catalog for a minimal API to show full-stack thinking end to end.</p>
+        </section>
+
+        <div class="detail-actions">
+            <a class="btn btn-primary" href="https://sanjit-dass.github.io/Summer-Intership-project-3-1/" target="_blank" rel="noopener noreferrer">Open live project</a>
+            <a class="btn btn-ghost" href="../index.html#contacts">Hire / collaborate</a>
+        </div>
+    </div>
+</body>
+</html>

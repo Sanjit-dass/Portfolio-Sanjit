@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify-style player — Case study | Sanjit Das</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body class="project-detail">
+    <div class="detail-wrap">
+        <a class="detail-back" href="../index.html#projects">← Back to projects</a>
+        <img class="detail-cover" src="../images/spotify.jpg" alt="Spotify-style UI preview">
+        <h1 class="detail-title">Spotify-style player</h1>
+        <p class="detail-tagline">A UI-focused clone exercise that recreates navigation, content rails, and the dark “player” aesthetic of a modern music app — prioritizing hierarchy, density, and motion over backend integration.</p>
+
+        <section class="detail-section">
+            <h2>Context &amp; goals</h2>
+            <p>Streaming apps are deceptively difficult: they pack navigation, marketing rails, personalized shelves, and a persistent player into one viewport. I used this clone to practice translating a dense reference UI into maintainable HTML/CSS, and to prove I can control contrast, scroll regions, and hover affordances without leaning on a component library.</p>
+            <p>Success meant the shell should feel “alive” at a glance — correct dark surfaces, subtle borders, and typography that stays legible when backgrounds are nearly black.</p>
+        </section>
+
+        <section class="detail-section">
+            <h2>Layout strategy</h2>
+            <p>The shell splits into a fixed sidebar, a scrollable main column, and a bottom player strip. I used flexbox for the macro layout and CSS grid inside rails so album art tiles stay aligned when titles wrap to two lines. Breakpoints collapse the sidebar into a narrower strip and tighten gutters so the same markup works on smaller laptops.</p>
+            <p>Color is tokenized through CSS variables for background tiers, border hairlines, and muted text. That made it straightforward to tweak contrast as I compared against the reference screenshots.</p>
+        </section>
+
+        <section class="detail-section">
+            <h2>What I shipped</h2>
+            <ul class="detail-list">
+                <li>Dark theme shell: sidebar, main discovery surface, and persistent player bar</li>
+                <li>Card-based rails with consistent image ratios and hover elevation</li>
+                <li>Responsive behavior for mid-width screens where horizontal space is limited</li>
+                <li>Light JavaScript for tab-style navigation cues and small interactive polish</li>
+                <li>Static deployment on GitHub Pages for instant sharing in applications and interviews</li>
+            </ul>
+        </section>
+
+        <section class="detail-section">
+            <h2>Tech &amp; constraints</h2>
+            <p>HTML, CSS, and vanilla JavaScript. No build step — useful for demonstrating that I can ship readable markup and organized stylesheets that another developer could pick up quickly.</p>
+        </section>
+
+        <section class="detail-section">
+            <h2>Results &amp; lessons</h2>
+            <p>The exercise sharpened my eye for micro-spacing and typographic rhythm in dark UIs. The hardest part was resisting “magic numbers” for padding; locking to a spacing scale kept the rails visually aligned when content length varied.</p>
+            <p>Next iteration would hook real audio APIs or at least a playlist JSON model, and add keyboard shortcuts for play/pause to mirror production accessibility expectations.</p>
+        </section>
+
+        <div class="detail-actions">
+            <a class="btn btn-primary" href="https://sanjit-dass.github.io/Spotify_Colon/" target="_blank" rel="noopener noreferrer">Open live project</a>
+            <a class="btn btn-ghost" href="../index.html#contacts">Hire / collaborate</a>
+        </div>
+    </div>
+</body>
+</html>

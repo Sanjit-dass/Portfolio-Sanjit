@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simon Says — Case study | Sanjit Das</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body class="project-detail">
+    <div class="detail-wrap">
+        <a class="detail-back" href="../index.html#projects">← Back to projects</a>
+        <img class="detail-cover" src="../images/simon%20sange.jpg" alt="Simon Says game preview">
+        <h1 class="detail-title">Simon Says</h1>
+        <p class="detail-tagline">A browser-based memory game where players repeat an increasingly long sequence — implemented with explicit game state, timed playback, and clear feedback loops in vanilla JavaScript.</p>
+
+        <section class="detail-section">
+            <h2>Context &amp; goals</h2>
+            <p>Simon-style games are a standard interview and learning exercise because they combine randomness, asynchronous playback, and strict input validation. My objective was to keep the rules obvious to a first-time player while keeping the implementation readable: a single source of truth for the sequence, explicit phases (playback vs input), and predictable reset behavior on mistakes.</p>
+        </section>
+
+        <section class="detail-section">
+            <h2>Game logic &amp; architecture</h2>
+            <p>The core model is an array representing the computer’s pattern plus an index for the player’s progress within the current round. Playback walks the array with delays between highlights so users can distinguish consecutive repeats. Input handlers compare each tap against the expected tile; mismatch triggers a short error animation and either restarts the round or decrements lives, depending on the rule set I locked in for the demo.</p>
+            <p>I isolated random tile selection and win/lose transitions into small functions so timing code stays separate from DOM updates — that separation made debugging off-by-one errors much faster.</p>
+        </section>
+
+        <section class="detail-section">
+            <h2>What I shipped</h2>
+            <ul class="detail-list">
+                <li>Full game loop: sequence growth, animated playback, and strict input validation</li>
+                <li>Score or level tracking with on-screen messaging for milestones</li>
+                <li>Visual (and optional audio) cues per tile with guarded timers to prevent race conditions</li>
+                <li>Responsive board layout with touch-friendly hit targets on phones</li>
+                <li>Hosted demo on GitHub Pages for frictionless testing on any device</li>
+            </ul>
+        </section>
+
+        <section class="detail-section">
+            <h2>Tech &amp; constraints</h2>
+            <p>HTML, CSS, JavaScript, and the DOM event model only — no React state or reducers. That constraint was intentional: it demonstrates comfort with asynchronous control flow using plain callbacks and <code>setTimeout</code> chains structured safely.</p>
+        </section>
+
+        <section class="detail-section">
+            <h2>Results &amp; lessons</h2>
+            <p>The playable build feels tight: inputs are ignored during playback so users cannot desync the round, and the UI always reflects the current phase. The main lesson was to document timing constants (playback speed, pause between tiles) in one place — tweaking “game feel” became a one-line change instead of a hunt through handlers.</p>
+            <p>Future work could add strict mode, high-score persistence, or haptic feedback on supported devices.</p>
+        </section>
+
+        <div class="detail-actions">
+            <a class="btn btn-primary" href="https://sanjit-dass.github.io/Simonsay-games/" target="_blank" rel="noopener noreferrer">Open live project</a>
+            <a class="btn btn-ghost" href="../index.html#contacts">Hire / collaborate</a>
+        </div>
+    </div>
+</body>
+</html>

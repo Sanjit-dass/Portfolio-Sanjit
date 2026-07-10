@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect Four — Case study | Sanjit Das</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body class="project-detail">
+    <div class="detail-wrap">
+        <a class="detail-back" href="../index.html#projects">← Back to projects</a>
+        <img class="detail-cover" src="../images/connect4game.jpg" alt="Connect Four board preview">
+        <h1 class="detail-title">Connect Four</h1>
+        <p class="detail-tagline">A two-player board game in the browser with gravity, column selection, and win detection across rows, columns, and both diagonal directions.</p>
+
+        <section class="detail-section">
+            <h2>Context &amp; goals</h2>
+            <p>Connect Four is a strong algorithmic exercise: the UI is simple, but the rules require a disciplined grid representation and efficient win checks as pieces stack. I wanted a demo that feels fair — illegal moves are impossible, wins are highlighted clearly, and a draw state is handled when the board fills.</p>
+        </section>
+
+        <section class="detail-section">
+            <h2>Model &amp; win detection</h2>
+            <p>The board is stored as a 2D structure mapping logical rows and columns to either empty cells or player tokens. Each drop resolves to the lowest free row in the chosen column; that mirrors physical gravity and keeps validation centralized. After every successful placement, the engine scans outward from the last move to detect four in a line horizontally, vertically, or diagonally, stopping early when a win is found.</p>
+            <p>Keeping win detection localized to the last piece avoids scanning the entire board every turn and keeps performance predictable even if the grid size were parameterized later.</p>
+        </section>
+
+        <section class="detail-section">
+            <h2>What I shipped</h2>
+            <ul class="detail-list">
+                <li>Interactive grid with click/tap column selection and animated piece placement</li>
+                <li>Turn indicators, disabled columns when full, and reset / new match controls</li>
+                <li>Authoritative win and draw detection with clear end-state messaging</li>
+                <li>Responsive board container that preserves readable cell size on phones</li>
+                <li>Static hosting on GitHub Pages with no install step for reviewers</li>
+            </ul>
+        </section>
+
+        <section class="detail-section">
+            <h2>Tech &amp; constraints</h2>
+            <p>HTML, CSS, and JavaScript with DOM rendering. State lives in plain data structures rather than framework stores, which makes the flow easy to trace in code review.</p>
+        </section>
+
+        <section class="detail-section">
+            <h2>Results &amp; lessons</h2>
+            <p>The final game is stable under fast clicking: input is ignored after a terminal state, and column clicks are ignored when full. The biggest takeaway was to write the win checker as pure functions first, then wire the UI — that order caught edge cases around diagonal boundaries before they became visual bugs.</p>
+            <p>An obvious extension is an AI opponent using minimax or heuristic column scoring; the current architecture separates rules from rendering so that can slot in behind the same event bus.</p>
+        </section>
+
+        <div class="detail-actions">
+            <a class="btn btn-primary" href="https://sanjit-dass.github.io/Connect-Four-Game/" target="_blank" rel="noopener noreferrer">Open live project</a>
+            <a class="btn btn-ghost" href="../index.html#contacts">Hire / collaborate</a>
+        </div>
+    </div>
+</body>
+</html>

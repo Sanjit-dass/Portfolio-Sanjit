@@ -1,349 +1,330 @@
-document.addEventListener("DOMContentLoaded", function () {
-    emailjs.init("G1GUQYgdcCt36H_j7"); // Replace with your actual Public Key
-    console.log("✅ EmailJS Initialized:", emailjs._userID);
-});
-
-
-$(document).ready(function(){
-    $(window).scroll(function(){
-        // sticky navbar on scroll script
-        if(this.scrollY > 20){
-            $('.navbar').addClass("sticky");
-        }else{
-            $('.navbar').removeClass("sticky");
+$(function () {
+    $(window).on('scroll', function () {
+        if (this.scrollY > 20) {
+            $('.navbar').addClass('sticky');
+        } else {
+            $('.navbar').removeClass('sticky');
         }
-        
-        // scroll-up button show/hide script
-        if(this.scrollY > 500){
-            $('.scroll-up-btn').addClass("show");
-        }else{
-            $('.scroll-up-btn').removeClass("show");
+        if (this.scrollY > 500) {
+            $('.scroll-up-btn').addClass('show');
+        } else {
+            $('.scroll-up-btn').removeClass('show');
         }
     });
 
-    // slide-up script
-    $('.scroll-up-btn').click(function(){
-        $('html').animate({scrollTop: 0});
-        // removing smooth scroll on slide-up button click
-        $('html').css("scrollBehavior", "auto");
+    $('.scroll-up-btn').on('click', function () {
+        $('html, body').animate({ scrollTop: 0 }, 480);
     });
 
-    $('.navbar .menu li a').click(function(){
-        // applying again smooth scroll on menu items click
-        $('html').css("scrollBehavior", "smooth");
+    $('.navbar .menu li a').on('click', function () {
+        $('.navbar .menu').removeClass('active');
+        $('.nav-toggle').attr('aria-expanded', 'false');
+        $('.nav-toggle i').removeClass('active');
     });
 
-    // toggle menu/navbar script
-    $('.menu-btn').click(function(){
-        $('.navbar .menu').toggleClass("active");
-        $('.menu-btn i').toggleClass("active");
+    $('.nav-toggle').on('click', function () {
+        $('.navbar .menu').toggleClass('active');
+        var open = $('.navbar .menu').hasClass('active');
+        $(this).attr('aria-expanded', open ? 'true' : 'false');
+        $(this).find('i').toggleClass('active');
     });
 
-    // typing text animation script
-    var typed = new Typed(".typing", {
-        strings: ["Front-End Developer", "Web Developer", "Full Stack Developer "],
-        typeSpeed: 100,
-        backSpeed: 60,
-        loop: true
-    });
+    if (typeof Typed !== 'undefined') {
+        new Typed('.typing', {
+            strings: ['Full Stack Developer', 'Web Developer', 'Software Developer'],
+            typeSpeed: 88,
+            backSpeed: 55,
+            loop: true,
+        });
+        new Typed('.typing-2', {
+            strings: ['Full Stack Developer', 'React & Node Developer', 'Web Developer'],
+            typeSpeed: 88,
+            backSpeed: 55,
+            loop: true,
+        });
+    }
 
-    var typed = new Typed(".typing-2", {
-        strings: ["Front-End Developer ", "Full Stack Developer", "Web Developer"],
-        typeSpeed: 100,
-        backSpeed: 60,
-        loop: true
-    });
-
-    // owl carousel script
-    $('.carousel').owlCarousel({
-        margin: 20,
+    var owlBase = {
+        margin: 22,
         loop: true,
         autoplay: true,
-        autoplayTimeOut: 2000,
         autoplayHoverPause: true,
-        responsive: {
-            0:{
-                items: 1,
-                nav: false
-            },
-            600:{
-                items: 2,
-                nav: false
-            },
-            1000:{
-                items: 3,
-                nav: false
-            }
-        }
-    });
-});
-
-
-    // demo
-
-    // JavaScript for fast scrolling
-document.documentElement.style.scrollBehavior = 'smooth';  // Smooth scroll globally
-
-// If you want to control scroll speed specifically, you can add a custom function.
-let scrollSpeed =2; // Higher number = faster scroll speed
-
-window.addEventListener('wheel', (event) => {
-    event.preventDefault();
-    window.scrollBy({
-        top: event.deltaY * scrollSpeed,
-        behavior: 'smooth'
-    });
-});
-
-
-    $(document).ready(function(){
-        $(".owl-carousel").owlCarousel({
-            items: 1,
-            loop: true,
-            margin: 10,
-            nav: true,
-            autoplay: true,
-            autoplayTimeout: 5000,
-            dots: true,
-            navText: ["<", ">"]
-        });
-    });
-
-    $('.carousel').slick({
-        autoplay: true,
-        autoplaySpeed: 500,  // Time between slide transitions
-    });
-    
-    function openImage(src) {
-        document.getElementById("fullscreenImage").src = src;
-        document.getElementById("fullscreenViewer").style.display = "flex";
-    
-        // Set the download link dynamically
-        let downloadBtn = document.getElementById("downloadImage");
-        downloadBtn.href = src; // Set the image source for download
-        downloadBtn.setAttribute("download", "image.jpg"); // Set a default filename
-    
-        // Hide other sections
-        document.querySelectorAll("body > *:not(#fullscreenViewer)").forEach(el => {
-            el.classList.add("hidden-content");
-        });
-    
-        document.body.classList.add("no-scroll"); // Disable scrolling
-    }
-    
-    function closeImage() {
-        document.getElementById("fullscreenViewer").style.display = "none";
-    
-        // Restore all hidden sections
-        document.querySelectorAll(".hidden-content").forEach(el => {
-            el.classList.remove("hidden-content");
-        });
-    
-        document.body.classList.remove("no-scroll"); // Enable scrolling
-    }
-    
-    
-    function openPreview(imageSrc) {
-        const preview = document.getElementById("preview");
-        const previewImg = document.getElementById("previewImg");
-        const downloadLink = document.getElementById("downloadLink");
-    
-        previewImg.src = imageSrc;
-        downloadLink.href = imageSrc;
-        
-        preview.style.display = "flex"; // Show the preview section
-        document.body.style.overflow = "hidden"; // Hide scrolling
-    }
-    
-    function closePreview() {
-        const preview = document.getElementById("preview");
-        preview.style.display = "none"; // Hide the preview section
-        document.body.style.overflow = "auto"; // Restore scrolling
-    }
-    
-// check cet
-function openPreview(imgSrc) {
-            document.getElementById("previewImg").src = imgSrc;
-            document.getElementById("downloadLink").href = imgSrc;
-            document.getElementById("preview").style.display = "flex";
-        }
-
-        function closePreview() {
-            document.getElementById("preview").style.display = "none";
-        }
-
-
-
-        document.addEventListener("DOMContentLoaded", function () {
-            const slider = document.querySelector(".slider");
-            let scrollAmount = 0;
-            const speed = 0.5; // Adjust scrolling speed
-            let clone = slider.innerHTML; // Clone the certificates for infinite scrolling
-            slider.innerHTML += clone; // Duplicate certificates to create a loop
-        
-            function scrollCertificates() {
-                scrollAmount += speed;
-                if (scrollAmount >= slider.scrollWidth / 2) {
-                    scrollAmount = 0; // Reset to create an infinite loop effect
-                }
-                slider.style.transform = `translateX(-${scrollAmount}px)`;
-                requestAnimationFrame(scrollCertificates);
-            }
-        
-            scrollCertificates();
-        });
-       
-
-        // validatin of form
-        document.addEventListener("DOMContentLoaded", function () {
-            const form = document.querySelector("form");
-        
-            form.addEventListener("submit", function (event) {
-                event.preventDefault();  // Prevent form submission for debugging
-        
-                console.log("Form submit event triggered!");
-        
-                const fullName = form.querySelector("input[type='text']").value.trim();
-                const email = form.querySelector("input[type='email']").value.trim();
-                const mobile = form.querySelector("input[placeholder='Mobile*']").value.trim();
-                const message = form.querySelector("textarea").value.trim();
-                const designation = form.querySelector("select").value;
-        
-                console.log("Full Name:", fullName);
-                console.log("Email:", email);
-                console.log("Mobile:", mobile);
-                console.log("Message:", message);
-                console.log("Designation:", designation);
-        
-                if (fullName === "") {
-                    console.error("Error: Full Name is required!");
-                    return;
-                }
-                if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-                    console.error("Error: Invalid Email!");
-                    return;
-                }
-                if (designation === "Select Designation") {
-                    console.error("Error: Please select a Designation!");
-                    return;
-                }
-                if (!/^[0-9]{10,15}$/.test(mobile)) {
-                    console.error("Error: Invalid Mobile Number!");
-                    return;
-                }
-                if (message === "") {
-                    console.error("Error: Message cannot be empty!");
-                    return;
-                }
-        
-                console.log("Form submitted successfully!");
-            });
-        });
-        
-        $(document).ready(function(){
-            $(".your-slider").slick();
-        });
-        
-        document.addEventListener("touchstart", function (event) {
-            event.preventDefault(); // Prevents default behavior
-        }, { passive: false });
-        
-        document.addEventListener("wheel", function (event) {
-            event.preventDefault(); // Prevents default scrolling
-        }, { passive: false });
-        
-        
-        document.getElementById("downloadResume").addEventListener("click", function (event) {
-            event.preventDefault();
-            let link = document.createElement("a");
-            link.href = "./assert/resume.pdf";
-            link.download = "resume.pdf";
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-        });
-        
-
-        
-       
-//email adimin and auto reply
-// Initialize EmailJS when the page loads
-document.addEventListener("DOMContentLoaded", function () {
-    emailjs.init("G1GUQYgdcCt36H_j7"); // Replace with your actual Public Key
-    console.log("✅ EmailJS Initialized:", emailjs._userID);
-});
-
-// Function to send email
-function sendEmail(event) {
-    event.preventDefault(); // Prevent form refresh
-
-    console.log("📩 Sending email...");
-
-    // Collect form data
-    const templateParams = {
-        name: document.getElementById("name").value,
-        email: document.getElementById("email").value,
-        designation: document.getElementById("designation").value,
-        mobile: document.getElementById("mobile").value,
-        message: document.getElementById("message").value
+        smartSpeed: 720,
+        dots: true,
+        nav: true,
+        navText: [
+            '<span class="owl-nav-label" aria-hidden="true">&#8249;</span>',
+            '<span class="owl-nav-label" aria-hidden="true">&#8250;</span>',
+        ],
     };
 
-    console.log("📨 Template Params:", templateParams);
+    if ($.fn.owlCarousel) {
+        $('.project-carousel').owlCarousel(
+            $.extend({}, owlBase, {
+                autoplayTimeout: 4200,
+                responsive: {
+                    0: { items: 1 },
+                    720: { items: 2 },
+                    1080: { items: 3 },
+                },
+            })
+        );
 
-    // Send email to Admin
-    emailjs.send("service_2ubzjri", "template_buarrzi", templateParams)
-        .then(response => {
-            console.log("✅ Admin Email Sent!", response);
+        $('.reviews-carousel').owlCarousel(
+            $.extend({}, owlBase, {
+                autoplayTimeout: 6200,
+                responsive: {
+                    0: { items: 1 },
+                    768: { items: 2 },
+                },
+            })
+        );
+    }
+});
 
-            // Send auto-reply to User
-            return emailjs.send("service_2ubzjri", "template_9aj9g8l", templateParams);
-        })
-        .then(response => {
-            console.log("✅ User Auto-Reply Sent!", response);
-            alert("✅ Message sent successfully!");
-            document.getElementById("contact-form").reset(); // Clear form
-        })
-        .catch(error => {
-            console.error("❌ Error sending email:", error);
-            alert("⚠️ Something went wrong. Check the console.");
-        });
+document.documentElement.style.scrollBehavior = 'smooth';
+
+function openImage(src) {
+    var viewer = document.getElementById('fullscreenViewer');
+    var img = document.getElementById('fullscreenImage');
+    var downloadBtn = document.getElementById('downloadImage');
+    if (!viewer || !img) return;
+    img.src = src;
+    if (downloadBtn) {
+        downloadBtn.href = src;
+        downloadBtn.setAttribute('download', 'gallery-image.jpg');
+    }
+    viewer.style.display = 'flex';
+    document.body.classList.add('no-scroll');
 }
 
-// Attach event listener to form
-document.getElementById("contact-form").addEventListener("submit", sendEmail);
+function closeImage() {
+    var viewer = document.getElementById('fullscreenViewer');
+    if (viewer) viewer.style.display = 'none';
+    document.body.classList.remove('no-scroll');
+}
 
+function openPreview(imgSrc) {
+    var preview = document.getElementById('preview');
+    var previewImg = document.getElementById('previewImg');
+    var downloadLink = document.getElementById('downloadLink');
+    if (!preview || !previewImg) return;
+    previewImg.src = imgSrc;
+    if (downloadLink) downloadLink.href = imgSrc;
+    preview.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+}
 
-  const form = document.getElementById('contact-form');
-  const status = document.getElementById('form-status');
+function closePreview() {
+    var preview = document.getElementById('preview');
+    if (preview) preview.style.display = 'none';
+    document.body.style.overflow = '';
+}
 
-  form.addEventListener('submit', async function(e) {
-    e.preventDefault();
-
-    const formData = new FormData(form);
-    const data = Object.fromEntries(formData.entries());
-
-    try {
-      const response = await fetch(form.action, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data)
-      });
-
-      if (response.ok) {
-        status.textContent = "Message sent successfully!";
-        status.classList.remove('text-red-500');
-        status.classList.add('text-green-400');
-        form.reset(); // reset form
-      } else {
-        status.textContent = "Failed to send message. Please try again.";
-        status.classList.remove('text-green-400');
-        status.classList.add('text-red-500');
-      }
-    } catch (error) {
-      status.textContent = "An error occurred. Please try again.";
-      status.classList.remove('text-green-400');
-      status.classList.add('text-red-500');
+document.addEventListener('DOMContentLoaded', function () {
+    var slider = document.querySelector('.cert-section .slider');
+    var row = slider && slider.querySelector('.flex');
+    if (slider && row) {
+        slider.appendChild(row.cloneNode(true));
     }
-  });
 
+    initAOS();
+    initScrollReveals();
+    initHeroBackgroundVideo();
+    initTechSkillIndicators();
 
+    var form = document.getElementById('contact-form');
+    if (!form) return;
+
+    form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var name = (form.querySelector('input[name="name"]') || {}).value;
+        name = name ? name.trim() : '';
+        var email = (form.querySelector('input[name="email"]') || {}).value.trim();
+        var mobile = (form.querySelector('input[name="mobile"]') || {}).value.trim();
+        var message = (form.querySelector('textarea[name="message"]') || {}).value.trim();
+        var designation = (form.querySelector('select[name="designation"]') || {}).value;
+
+        if (!name) {
+            alert('Please enter your name.');
+            return;
+        }
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+            alert('Please enter a valid email.');
+            return;
+        }
+        if (!designation) {
+            alert('Please choose a topic.');
+            return;
+        }
+        if (!/^[0-9+\s()-]{10,20}$/.test(mobile)) {
+            alert('Please enter a valid phone number.');
+            return;
+        }
+        if (!message) {
+            alert('Please enter a message.');
+            return;
+        }
+
+        alert('Thanks — your message is validated. Connect this form to EmailJS, Formspree, or your backend when ready.');
+    });
+});
+
+// Accessibility & gallery keyboard handling
+document.addEventListener('DOMContentLoaded', function () {
+    var gallery = document.querySelector('.gallery-scroll');
+    if (!gallery) return;
+
+    // Make images keyboard-activatable and listen for Enter/Space
+    var thumbs = gallery.querySelectorAll('.gallery-thumb');
+    thumbs.forEach(function (img) {
+        img.setAttribute('tabindex', '0');
+        img.addEventListener('keydown', function (e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                openImage(img.src);
+            }
+        });
+    });
+
+    // Arrow key scrolling for focused gallery
+    gallery.addEventListener('keydown', function (e) {
+        var step = gallery.clientWidth * 0.6;
+        if (e.key === 'ArrowRight') {
+            gallery.scrollBy({ left: step, behavior: 'smooth' });
+            e.preventDefault();
+        } else if (e.key === 'ArrowLeft') {
+            gallery.scrollBy({ left: -step, behavior: 'smooth' });
+            e.preventDefault();
+        }
+    });
+
+    // Allow gallery to receive keyboard focus
+    gallery.setAttribute('tabindex', '0');
+});
+
+function initScrollReveals() {
+    if (document.body.classList.contains('aos-enabled')) {
+        return;
+    }
+    var nodes = document.querySelectorAll('.reveal');
+    if (!nodes.length) {
+        return;
+    }
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || !('IntersectionObserver' in window)) {
+        nodes.forEach(function (n) {
+            n.classList.add('is-visible');
+        });
+        return;
+    }
+    var io = new IntersectionObserver(
+        function (entries) {
+            entries.forEach(function (entry) {
+                if (!entry.isIntersecting) {
+                    return;
+                }
+                entry.target.classList.add('is-visible');
+                io.unobserve(entry.target);
+            });
+        },
+        { root: null, rootMargin: '0px 0px -5% 0px', threshold: 0.06 }
+    );
+    nodes.forEach(function (n) {
+        io.observe(n);
+    });
+}
+
+function initTechSkillIndicators() {
+    var rings = document.querySelectorAll('.tech-progress-ring');
+    if (!rings.length) {
+        return;
+    }
+    var io = new IntersectionObserver(
+        function (entries, observer) {
+            entries.forEach(function (entry) {
+                if (!entry.isIntersecting) {
+                    return;
+                }
+                var ring = entry.target;
+                var target = Number(ring.getAttribute('data-progress') || 0);
+                ring.style.setProperty('--p', String(Math.max(0, Math.min(100, target))));
+                observer.unobserve(ring);
+            });
+        },
+        { root: null, threshold: 0.35 }
+    );
+    rings.forEach(function (ring) {
+        ring.style.setProperty('--p', '0');
+        io.observe(ring);
+    });
+}
+
+function initAOS() {
+    if (typeof AOS === 'undefined') {
+        return;
+    }
+    document.body.classList.add('aos-enabled');
+    AOS.init({
+        duration: 700,
+        easing: 'ease-out-cubic',
+        once: true,
+        offset: 60,
+        delay: 0,
+    });
+}
+
+function initHeroBackgroundVideo() {
+    var heroSection = document.getElementById('home');
+    var bgVideo = document.querySelector('.hero-bg-video');
+    if (!heroSection || !bgVideo) {
+        return;
+    }
+
+    // Try starting with sound.
+    bgVideo.muted = false;
+    bgVideo.volume = 1;
+    var playPromise = bgVideo.play();
+    if (playPromise && typeof playPromise.catch === 'function') {
+        playPromise.catch(function () {
+            // If browser blocks autoplay-with-sound, start playback on first user interaction.
+            var startWithSound = function () {
+                bgVideo.muted = false;
+                bgVideo.volume = 1;
+                var retryPlay = bgVideo.play();
+                if (retryPlay && typeof retryPlay.catch === 'function') {
+                    retryPlay.catch(function () {});
+                }
+                window.removeEventListener('pointerdown', startWithSound, true);
+                window.removeEventListener('keydown', startWithSound, true);
+                window.removeEventListener('touchstart', startWithSound, true);
+            };
+
+            window.addEventListener('pointerdown', startWithSound, true);
+            window.addEventListener('keydown', startWithSound, true);
+            window.addEventListener('touchstart', startWithSound, true);
+        });
+    }
+
+    var io = new IntersectionObserver(
+        function (entries) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    var resumePromise = bgVideo.play();
+                    if (resumePromise && typeof resumePromise.catch === 'function') {
+                        resumePromise.catch(function () {});
+                    }
+                } else {
+                    bgVideo.pause();
+                }
+            });
+        },
+        { root: null, threshold: 0.35 }
+    );
+    io.observe(heroSection);
+}
+
+if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost')) {
+    navigator.serviceWorker
+        .register('./service-worker.js')
+        .catch(function () {});
+}

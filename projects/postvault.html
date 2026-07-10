@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PostVault — Case Study | Sanjit Das</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body class="project-detail">
+
+    <div class="detail-wrap">
+
+        <a class="detail-back" href="../index.html#projects">
+            ← Back to projects
+        </a>
+
+        <img
+            class="detail-cover"
+            src="../images/postvault.png"
+            alt="PostVault preview"
+        >
+
+        <h1 class="detail-title">PostVault</h1>
+
+        <p class="detail-tagline">
+            A secure post-sharing platform where users can create accounts, upload images, share posts, and manage only their own content.
+        </p>
+
+        <section class="detail-section">
+            <h2>Project overview</h2>
+
+            <p>
+                PostVault is a full-stack social posting platform designed for authenticated users to share content publicly. Users can register, upload profile images, create posts, and write about themselves while maintaining ownership over their content.
+            </p>
+
+            <p>
+                The main focus of the project was implementing secure authorization so that only the creator of a post can edit or delete it, while other users can still view the content.
+            </p>
+        </section>
+
+        <section class="detail-section">
+            <h2>Key features</h2>
+
+            <ul class="detail-list">
+                <li>User registration and secure login system</li>
+
+                <li>Profile image upload functionality</li>
+
+                <li>Create, edit, and delete personal posts</li>
+
+                <li>Authorization system for post ownership</li>
+
+                <li>Public post feed for all users</li>
+
+                <li>Responsive UI for mobile and desktop devices</li>
+
+                <li>Modern card-based post layout</li>
+            </ul>
+        </section>
+
+        <section class="detail-section">
+            <h2>Security &amp; authorization</h2>
+
+            <p>
+                A major part of the project was implementing ownership-based access control. Only the user who created a post can update or remove it from the platform. Other users are restricted from modifying content they do not own.
+            </p>
+
+            <p>
+                This structure helped improve backend authorization handling and strengthened understanding of protected routes and user validation workflows.
+            </p>
+        </section>
+
+        <section class="detail-section">
+            <h2>Tech stack</h2>
+
+            <p>
+                HTML, CSS, JavaScript, React, Node.js, Express.js, MongoDB, authentication middleware, and REST APIs.
+            </p>
+        </section>
+
+        <section class="detail-section">
+            <h2>Results &amp; learning</h2>
+
+            <p>
+                Building PostVault improved my understanding of authentication systems, protected backend routes, CRUD operations, image uploads, and role-based authorization logic.
+            </p>
+
+            <p>
+                The biggest learning experience was implementing secure edit and delete permissions while keeping the user experience smooth and responsive.
+            </p>
+        </section>
+
+        <div class="detail-actions">
+
+            <a
+                class="btn btn-primary"
+                href="https://appwriteblog-6ls7hyy73-sanjit9842-gmailcoms-projects.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Open live project
+            </a>
+
+            <a
+                class="btn btn-ghost"
+                href="../index.html#contacts"
+            >
+                Hire / collaborate
+            </a>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

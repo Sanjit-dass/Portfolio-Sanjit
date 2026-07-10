@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce storefront — Case study | Sanjit Das</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body class="project-detail">
+    <div class="detail-wrap">
+        <a class="detail-back" href="../index.html#projects">← Back to projects</a>
+        <img class="detail-cover" src="../images/ecommerce.jpg" alt="E-commerce storefront preview">
+        <h1 class="detail-title">E-commerce storefront</h1>
+        <p class="detail-tagline">A storefront-style site emphasizing product discovery, promotional bands, and a purchase-oriented layout — tuned so marketing content and catalog browsing coexist without visual noise.</p>
+
+        <section class="detail-section">
+            <h2>Context &amp; goals</h2>
+            <p>E-commerce landing pages often fail when everything screams at the same volume: hero banners, sale ribbons, and product grids compete for attention. I structured this storefront around a clear visual ladder — primary hero, supporting promo strip, then dense catalog rows — so scanning patterns feel natural on both desktop and mobile.</p>
+        </section>
+
+        <section class="detail-section">
+            <h2>UX &amp; layout decisions</h2>
+            <p>Navigation stays shallow: shoppers can jump to featured collections without hunting through nested menus. Product tiles reuse one card system with fixed image aspect ratios so rows align cleanly even when titles differ in length. Sale or “new” labels are constrained to a small badge system so they read as metadata, not as separate layout islands.</p>
+            <p>Breakpoints focus on readable line lengths and tap targets rather than shrinking text to fit; on narrow screens, grids collapse progressively instead of squeezing four cramped columns.</p>
+        </section>
+
+        <section class="detail-section">
+            <h2>What I shipped</h2>
+            <ul class="detail-list">
+                <li>Landing composition: hero, promotional bands, and curated product shelves</li>
+                <li>Reusable product cards with consistent spacing, price styling, and CTA placement</li>
+                <li>Responsive navigation patterns (collapse-friendly header and scrollable rails where needed)</li>
+                <li>Static assets and scripts suitable for GitHub Pages without server configuration</li>
+                <li>Performance-minded image usage: correct dimensions and lazy-friendly markup patterns</li>
+            </ul>
+        </section>
+
+        <section class="detail-section">
+            <h2>Tech &amp; constraints</h2>
+            <p>HTML, CSS, JavaScript, and responsive techniques with a static host. The constraint reinforced good habits: no hidden dependency on server rendering, so the page must be meaningful even before scripts execute.</p>
+        </section>
+
+        <section class="detail-section">
+            <h2>Results &amp; lessons</h2>
+            <p>The site reads as intentional merchandising rather than a template dump. I learned to judge quality by squint tests: if hierarchy survives when blurred, spacing and contrast are probably right. Next steps would wire a real inventory source, add search/filter UI, and instrument basic analytics events for funnel learning.</p>
+        </section>
+
+        <div class="detail-actions">
+            <a class="btn btn-primary" href="https://sanjit-dass.github.io/mantra_colonperfect/" target="_blank" rel="noopener noreferrer">Open live project</a>
+            <a class="btn btn-ghost" href="../index.html#contacts">Hire / collaborate</a>
+        </div>
+    </div>
+</body>
+</html>

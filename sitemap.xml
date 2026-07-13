@@ -59,6 +59,17 @@
 
   <!-- Project pages -->
   <url>
+    <loc>https://sanjitdas.com.np/projects/school-management-system.html</loc>
+    <lastmod>2026-07-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+    <image:image>
+      <image:loc>https://sanjitdas.com.np/images/sanjitPhoto.jpeg</image:loc>
+      <image:caption>School Management System project by Er. Sanjit Das</image:caption>
+    </image:image>
+  </url>
+
+  <url>
     <loc>https://sanjitdas.com.np/projects/complaintpro.html</loc>
     <lastmod>2026-07-12</lastmod>
     <changefreq>monthly</changefreq>

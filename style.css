@@ -1750,6 +1750,82 @@ footer span a:hover{
     color: #e2e8f0;
 }
 
+.social-btn--github {
+    background: radial-gradient(circle at top left, rgba(255,255,255,0.15), rgba(0,0,0,0.95));
+    border-color: #24292f;
+    color: #ffffff;
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,0.08), 0 14px 30px rgba(0,0,0,0.22);
+}
+
+.social-btn--github:hover {
+    background: linear-gradient(145deg, #24292f, #0d1117);
+    border-color: #ffffff;
+    color: #ffffff;
+}
+
+.social-btn--facebook {
+    background: radial-gradient(circle at top left, rgba(255,255,255,0.16), rgba(24,119,242,0.95));
+    border-color: #1877f2;
+    color: #ffffff;
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,0.14), 0 14px 30px rgba(24,119,242,0.22);
+}
+
+.social-btn--facebook:hover {
+    background: linear-gradient(145deg, #1877f2, #0f5ed1);
+    border-color: #ffffff;
+    color: #ffffff;
+}
+
+.social-btn--youtube {
+    background: radial-gradient(circle at top left, rgba(255,255,255,0.16), rgba(228, 50, 48, 0.95));
+    border-color: #ff0000;
+    color: #ffffff;
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,0.14), 0 14px 30px rgba(255,0,0,0.2);
+}
+
+.social-btn--youtube:hover {
+    background: linear-gradient(145deg, #ff0000, #c9110d);
+    border-color: #ffffff;
+    color: #ffffff;
+}
+
+.social-btn--instagram {
+    background: radial-gradient(circle at top left, rgba(255,255,255,0.18), rgba(225, 48, 108, 0.95));
+    border-color: #df4896;
+    color: #ffffff;
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,0.14), 0 14px 30px rgba(221, 73, 150, 0.22);
+}
+
+.social-btn--instagram:hover {
+    background: linear-gradient(145deg, #f09433, #bc1888);
+    border-color: #ffffff;
+    color: #ffffff;
+}
+
+.social-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 14px;
+    background: var(--surface);
+    color: #c9d1dc;
+    border: 1px solid var(--border);
+    transition: color 0.2s ease, border-color 0.2s ease, transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.social-btn i {
+    font-size: 1.2rem;
+    line-height: 1;
+}
+
+.social-btn:hover {
+    color: var(--accent);
+    border-color: rgba(201, 162, 39, 0.35);
+    transform: translateY(-2px);
+}
+
 .projects.section--hero-bg {
     padding-top: 5rem;
     padding-bottom: 5rem;

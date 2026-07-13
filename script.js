@@ -1,4 +1,360 @@
 $(function () {
+    // Initialize on page load
+    initLoader();
+    initCustomCursor();
+
+    // Premium Loading Animation
+    function initLoader() {
+        const loader = document.getElementById('loader');
+        const progress = document.querySelector('.loader-progress');
+        
+        if (!loader) return;
+        
+        let loadProgress = 0;
+        const loadInterval = setInterval(() => {
+            loadProgress += Math.random() * 15;
+            if (loadProgress >= 100) {
+                loadProgress = 100;
+                clearInterval(loadInterval);
+                setTimeout(() => {
+                    loader.classList.add('hidden');
+                    initHeroAnimations();
+                }, 500);
+            }
+            progress.style.width = loadProgress + '%';
+        }, 100);
+    }
+
+    // Custom Cursor
+    function initCustomCursor() {
+        const cursor = document.querySelector('.custom-cursor');
+        const cursorDot = document.querySelector('.cursor-dot');
+        const cursorOutline = document.querySelector('.cursor-outline');
+        
+        if (!cursor || window.innerWidth <= 768) return;
+
+        let mouseX = 0, mouseY = 0;
+        let cursorX = 0, cursorY = 0;
+
+        document.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+        });
+
+        function animateCursor() {
+            cursorX += (mouseX - cursorX) * 0.15;
+            cursorY += (mouseY - cursorY) * 0.15;
+            cursorDot.style.left = mouseX + 'px';
+            cursorDot.style.top = mouseY + 'px';
+            cursorOutline.style.left = cursorX + 'px';
+            cursorOutline.style.top = cursorY + 'px';
+            requestAnimationFrame(animateCursor);
+        }
+        animateCursor();
+
+        const interactiveElements = document.querySelectorAll('a, button, .project-card, .service-card, .edu-card');
+        interactiveElements.forEach(el => {
+            el.addEventListener('mouseenter', () => cursor.classList.add('hovering'));
+            el.addEventListener('mouseleave', () => cursor.classList.remove('hovering'));
+        });
+    }
+
+    // Hero Animations
+    function initHeroAnimations() {
+        if (typeof gsap !== 'undefined') {
+            const tl = gsap.timeline();
+            tl.from('.hero-content', { opacity: 0, x: -100, duration: 1.2, ease: 'power3.out' })
+            .from('.hero-name', { opacity: 0, x: -80, duration: 1, ease: 'power3.out' }, '-=0.8')
+            .from('.hero-role', { opacity: 0, x: -60, duration: 0.8, ease: 'power3.out' }, '-=0.6')
+            .from('.hero-lead', { opacity: 0, x: -60, duration: 0.8, ease: 'power3.out' }, '-=0.6')
+            .from('.hero-actions', { opacity: 0, x: -60, duration: 0.8, ease: 'power3.out' }, '-=0.6');
+        }
+    }
+
+    // GSAP Premium Animations
+    if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Section scroll animations - fade + slide + scale
+        gsap.utils.toArray('section').forEach((section, index) => {
+            const direction = index % 2 === 0 ? -100 : 100;
+            gsap.from(section, {
+                scrollTrigger: {
+                    trigger: section,
+                    start: 'top 85%',
+                    toggleActions: 'play reverse play reverse'
+                },
+                opacity: 0,
+                x: direction,
+                scale: 0.95,
+                duration: 1.2,
+                ease: 'power3.out'
+            });
+        });
+
+        // Project cards stagger animation - fade + slide + scale
+        gsap.from('.project-card', {
+            scrollTrigger: { trigger: '.project-carousel', start: 'top 80%', toggleActions: 'play reverse play reverse' },
+            opacity: 0,
+            y: 50,
+            scale: 0.9,
+            duration: 0.8,
+            stagger: 0.1,
+            ease: 'power3.out'
+        });
+
+        // Service cards stagger animation
+        gsap.from('.service-card', {
+            scrollTrigger: { trigger: '.services-grid', start: 'top 80%', toggleActions: 'play reverse play reverse' },
+            opacity: 0,
+            y: 50,
+            scale: 0.9,
+            duration: 0.8,
+            stagger: 0.1,
+            ease: 'power3.out'
+        });
+
+        // Skill cards stagger animation
+        gsap.from('.tech-skill-card', {
+            scrollTrigger: { trigger: '.tech-skill-grid', start: 'top 80%', toggleActions: 'play reverse play reverse' },
+            opacity: 0,
+            y: 50,
+            scale: 0.9,
+            duration: 0.8,
+            stagger: 0.1,
+            ease: 'power3.out'
+        });
+
+        // Education cards reveal
+        gsap.from('.section-edu .edu-card', {
+            scrollTrigger: { trigger: '.section-edu', start: 'top 80%', toggleActions: 'play reverse play reverse' },
+            opacity: 0,
+            x: -50,
+            duration: 0.8,
+            stagger: 0.15,
+            ease: 'power3.out'
+        });
+
+        // Navigation smooth transition - fade + slide + scale
+        $('.navbar .menu li a').on('click', function(e) {
+            e.preventDefault();
+            const target = $(this).attr('href');
+            const targetSection = $(target);
+            
+            gsap.to('section', {
+                opacity: 0,
+                scale: 0.98,
+                x: -30,
+                duration: 0.4,
+                ease: 'power2.in',
+                onComplete: () => {
+                    $('html, body').animate({ scrollTop: targetSection.offset().top - 80 }, 600, 'swing', () => {
+                        gsap.to(targetSection, {
+                            opacity: 1,
+                            scale: 1,
+                            x: 0,
+                            duration: 0.6,
+                            ease: 'power3.out'
+                        });
+                        gsap.to('section', {
+                            opacity: 1,
+                            scale: 1,
+                            x: 0,
+                            duration: 0.6,
+                            ease: 'power3.out'
+                        });
+                    });
+                }
+            });
+
+            $('.navbar .menu').removeClass('active');
+            $('.nav-toggle').attr('aria-expanded', 'false');
+            $('.nav-toggle i').removeClass('active');
+        });
+
+        // Premium hover interactions - cards lift + image zoom
+        $('.project-card, .service-card, .edu-card').each(function() {
+            $(this).on('mouseenter', function() {
+                gsap.to(this, {
+                    y: -12,
+                    scale: 1.02,
+                    boxShadow: '0 25px 50px rgba(0, 0, 0, 0.4)',
+                    duration: 0.4,
+                    ease: 'power2.out'
+                });
+                gsap.to($(this).find('img'), {
+                    scale: 1.08,
+                    duration: 0.6,
+                    ease: 'power2.out'
+                });
+            });
+
+            $(this).on('mouseleave', function() {
+                gsap.to(this, {
+                    y: 0,
+                    scale: 1,
+                    boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
+                    duration: 0.4,
+                    ease: 'power2.out'
+                });
+                gsap.to($(this).find('img'), {
+                    scale: 1,
+                    duration: 0.6,
+                    ease: 'power2.out'
+                });
+            });
+        });
+
+        // Parallax effects for background
+        gsap.to('.bg-shape-1', {
+            scrollTrigger: {
+                trigger: 'body',
+                start: 'top top',
+                end: 'bottom bottom',
+                scrub: 1
+            },
+            y: -200,
+            x: 100,
+            ease: 'none'
+        });
+
+        gsap.to('.bg-shape-2', {
+            scrollTrigger: {
+                trigger: 'body',
+                start: 'top top',
+                end: 'bottom bottom',
+                scrub: 1.5
+            },
+            y: 200,
+            x: -100,
+            ease: 'none'
+        });
+
+        // Parallax for hero background
+        gsap.to('.hero-bg-video', {
+            scrollTrigger: {
+                trigger: '.hero-section',
+                start: 'top top',
+                end: 'bottom top',
+                scrub: true
+            },
+            y: 150,
+            scale: 1.1,
+            ease: 'none'
+        });
+
+        // Animated text reveal
+        gsap.utils.toArray('.section-head').forEach(head => {
+            gsap.from(head, {
+                scrollTrigger: {
+                    trigger: head,
+                    start: 'top 85%',
+                    toggleActions: 'play reverse play reverse'
+                },
+                opacity: 0,
+                y: 40,
+                duration: 0.8,
+                ease: 'power3.out'
+            });
+        });
+
+        // Number counter animation
+        gsap.utils.toArray('.counter').forEach(counter => {
+            const target = parseInt(counter.getAttribute('data-target') || counter.innerText);
+            gsap.from(counter, {
+                scrollTrigger: {
+                    trigger: counter,
+                    start: 'top 85%'
+                },
+                innerText: 0,
+                duration: 2,
+                ease: 'power2.out',
+                snap: { innerText: 1 },
+                onUpdate: function() {
+                    counter.innerText = Math.ceil(this.targets()[0].innerText);
+                }
+            });
+        });
+
+        // Navbar active indicator
+        const navLinks = $('.navbar .menu li a');
+        navLinks.on('click', function() {
+            navLinks.removeClass('active');
+            $(this).addClass('active');
+        });
+
+        // Smooth navbar transition
+        $(window).on('scroll', function() {
+            if (this.scrollY > 50) {
+                gsap.to('.navbar', {
+                    backgroundColor: 'rgba(21, 28, 44, 0.95)',
+                    backdropFilter: 'blur(10px)',
+                    duration: 0.3,
+                    ease: 'power2.out'
+                });
+            } else {
+                gsap.to('.navbar', {
+                    backgroundColor: 'rgba(21, 28, 44, 0)',
+                    backdropFilter: 'blur(0px)',
+                    duration: 0.3,
+                    ease: 'power2.out'
+                });
+            }
+        });
+
+        // Modal animations
+        function openModal(modal) {
+            gsap.to(modal, {
+                opacity: 1,
+                visibility: 'visible',
+                duration: 0.3,
+                ease: 'power2.out'
+            });
+            gsap.to(modal.find('.modal-content'), {
+                scale: 1,
+                y: 0,
+                duration: 0.4,
+                ease: 'power3.out',
+                delay: 0.1
+            });
+        }
+
+        function closeModal(modal) {
+            gsap.to(modal.find('.modal-content'), {
+                scale: 0.9,
+                y: 20,
+                duration: 0.3,
+                ease: 'power2.in'
+            });
+            gsap.to(modal, {
+                opacity: 0,
+                visibility: 'hidden',
+                duration: 0.3,
+                ease: 'power2.in',
+                delay: 0.1
+            });
+        }
+
+        // Track progress lines for each education column
+        document.querySelectorAll('.section-edu .edu-track').forEach(track => {
+            track.style.position = 'relative';
+            const timelineProgress = document.createElement('div');
+            timelineProgress.className = 'timeline-progress';
+            track.appendChild(timelineProgress);
+
+            gsap.to(timelineProgress, {
+                scrollTrigger: {
+                    trigger: track,
+                    start: 'top 80%',
+                    end: 'bottom 20%',
+                    scrub: true
+                },
+                height: '100%',
+                ease: 'none'
+            });
+        });
+    }
+
     $(window).on('scroll', function () {
         if (this.scrollY > 20) {
             $('.navbar').addClass('sticky');
@@ -45,37 +401,88 @@ $(function () {
     }
 
     var owlBase = {
-        margin: 22,
+        margin: 24,
         loop: true,
         autoplay: true,
         autoplayHoverPause: true,
-        smartSpeed: 720,
+        smartSpeed: 1000,
         dots: true,
         nav: true,
         navText: [
             '<span class="owl-nav-label" aria-hidden="true">&#8249;</span>',
             '<span class="owl-nav-label" aria-hidden="true">&#8250;</span>',
         ],
+        animateOut: 'fadeOut',
+        animateIn: 'fadeIn',
+        slideTransition: 'ease-in-out',
     };
 
     if ($.fn.owlCarousel) {
         $('.project-carousel').owlCarousel(
             $.extend({}, owlBase, {
-                autoplayTimeout: 4200,
+                autoplayTimeout: 5000,
                 responsive: {
-                    0: { items: 1 },
-                    720: { items: 2 },
-                    1080: { items: 3 },
+                    0: { items: 1, margin: 16 },
+                    720: { items: 2, margin: 20 },
+                    1080: { items: 3, margin: 24 },
                 },
             })
         );
 
         $('.reviews-carousel').owlCarousel(
             $.extend({}, owlBase, {
-                autoplayTimeout: 6200,
+                autoplayTimeout: 7000,
                 responsive: {
-                    0: { items: 1 },
-                    768: { items: 2 },
+                    0: { items: 1, margin: 16 },
+                    768: { items: 2, margin: 20 },
+                },
+            })
+        );
+
+        $('.edu-carousel').owlCarousel(
+            $.extend({}, owlBase, {
+                autoplayTimeout: 6000,
+                autoplay: true,
+                loop: true,
+                nav: true,
+                dots: true,
+                responsive: {
+                    0: { items: 1, margin: 20 },
+                    768: { items: 1, margin: 30 },
+                    1024: { items: 1, margin: 40 },
+                },
+            })
+        );
+
+        $('.services-carousel').owlCarousel(
+            $.extend({}, owlBase, {
+                autoplayTimeout: 5000,
+                autoplay: true,
+                loop: true,
+                nav: true,
+                dots: true,
+                responsive: {
+                    0: { items: 1, margin: 16 },
+                    640: { items: 2, margin: 20 },
+                    768: { items: 2, margin: 24 },
+                    1024: { items: 3, margin: 28 },
+                    1280: { items: 4, margin: 32 },
+                },
+            })
+        );
+
+        $('.skills-carousel').owlCarousel(
+            $.extend({}, owlBase, {
+                autoplayTimeout: 5500,
+                autoplay: true,
+                loop: true,
+                nav: true,
+                dots: true,
+                responsive: {
+                    0: { items: 1, margin: 16 },
+                    640: { items: 2, margin: 20 },
+                    768: { items: 2, margin: 24 },
+                    1024: { items: 3, margin: 28 },
                 },
             })
         );
@@ -265,11 +672,13 @@ function initAOS() {
     }
     document.body.classList.add('aos-enabled');
     AOS.init({
-        duration: 700,
+        duration: 800,
         easing: 'ease-out-cubic',
         once: true,
-        offset: 60,
+        offset: 80,
         delay: 0,
+        mirror: false,
+        anchorPlacement: 'top-bottom',
     });
 }
 

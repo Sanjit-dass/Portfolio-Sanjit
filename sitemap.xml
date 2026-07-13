@@ -5,47 +5,54 @@
   <!-- Homepage -->
   <url>
     <loc>https://sanjitdas.com.np/</loc>
-    <lastmod>2026-07-10</lastmod>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.00</priority>
     <image:image>
       <image:loc>https://sanjitdas.com.np/images/sanjitPhoto.jpeg</image:loc>
       <image:caption>Sanjit Das — Full Stack Developer</image:caption>
+      <image:title>Sanjit Das Professional Photo</image:title>
+      <image:license>https://sanjitdas.com.np/</image:license>
     </image:image>
   </url>
 
   <!-- Core pages -->
   <url>
     <loc>https://sanjitdas.com.np/about.html</loc>
-    <lastmod>2026-07-10</lastmod>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.90</priority>
+    <image:image>
+      <image:loc>https://sanjitdas.com.np/images/sanjitPhoto.jpeg</image:loc>
+      <image:caption>Sanjit Das - Full Stack Developer About Page</image:caption>
+      <image:title>Sanjit Das Profile Photo</image:title>
+    </image:image>
   </url>
 
   <url>
     <loc>https://sanjitdas.com.np/projects.html</loc>
-    <lastmod>2026-07-10</lastmod>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
 
   <url>
     <loc>https://sanjitdas.com.np/services.html</loc>
-    <lastmod>2026-07-10</lastmod>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.90</priority>
   </url>
 
   <url>
     <loc>https://sanjitdas.com.np/blog.html</loc>
-    <lastmod>2026-07-10</lastmod>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
 
   <url>
     <loc>https://sanjitdas.com.np/contact.html</loc>
-    <lastmod>2026-07-10</lastmod>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.90</priority>
   </url>
@@ -53,129 +60,139 @@
   <!-- Project pages -->
   <url>
     <loc>https://sanjitdas.com.np/projects/complaintpro.html</loc>
-    <lastmod>2026-07-10</lastmod>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
     <image:image>
       <image:loc>https://sanjitdas.com.np/images/complaintpro.png</image:loc>
+      <image:caption>ComplaintPro Project by Sanjit Das</image:caption>
     </image:image>
   </url>
 
   <url>
     <loc>https://sanjitdas.com.np/projects/connect-four.html</loc>
-    <lastmod>2026-07-10</lastmod>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
     <image:image>
       <image:loc>https://sanjitdas.com.np/images/connect4game.jpg</image:loc>
+      <image:caption>Connect Four Game Project by Sanjit Das</image:caption>
     </image:image>
   </url>
 
   <url>
     <loc>https://sanjitdas.com.np/projects/jobportal.html</loc>
-    <lastmod>2026-07-10</lastmod>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
     <image:image>
       <image:loc>https://sanjitdas.com.np/images/jobportal.png</image:loc>
+      <image:caption>Job Portal Project by Sanjit Das</image:caption>
     </image:image>
   </url>
 
   <url>
     <loc>https://sanjitdas.com.np/projects/personal-ai-assistant.html</loc>
-    <lastmod>2026-07-10</lastmod>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
     <image:image>
       <image:loc>https://sanjitdas.com.np/images/aiassistant.png</image:loc>
+      <image:caption>Personal AI Assistant Project by Sanjit Das</image:caption>
     </image:image>
   </url>
 
   <url>
     <loc>https://sanjitdas.com.np/projects/postvault.html</loc>
-    <lastmod>2026-07-10</lastmod>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
     <image:image>
       <image:loc>https://sanjitdas.com.np/images/postvault.png</image:loc>
+      <image:caption>PostVault Project by Sanjit Das</image:caption>
     </image:image>
   </url>
 
   <url>
     <loc>https://sanjitdas.com.np/projects/sanjit-mart.html</loc>
-    <lastmod>2026-07-10</lastmod>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
     <image:image>
       <image:loc>https://sanjitdas.com.np/images/sanjitmart.jpg</image:loc>
+      <image:caption>Sanjit Mart E-commerce Project by Sanjit Das</image:caption>
     </image:image>
   </url>
 
   <url>
     <loc>https://sanjitdas.com.np/projects/simon-says.html</loc>
-    <lastmod>2026-07-10</lastmod>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.70</priority>
     <image:image>
       <image:loc>https://sanjitdas.com.np/images/simon%20sange.jpg</image:loc>
+      <image:caption>Simon Says Game Project by Sanjit Das</image:caption>
     </image:image>
   </url>
 
   <url>
     <loc>https://sanjitdas.com.np/projects/spotify-clone.html</loc>
-    <lastmod>2026-07-10</lastmod>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
     <image:image>
       <image:loc>https://sanjitdas.com.np/images/spotify.jpg</image:loc>
+      <image:caption>Spotify Clone Project by Sanjit Das</image:caption>
     </image:image>
   </url>
 
   <url>
     <loc>https://sanjitdas.com.np/projects/storefront.html</loc>
-    <lastmod>2026-07-10</lastmod>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
     <image:image>
       <image:loc>https://sanjitdas.com.np/images/ecommerce.jpg</image:loc>
+      <image:caption>E-commerce Storefront Project by Sanjit Das</image:caption>
     </image:image>
   </url>
 
   <url>
     <loc>https://sanjitdas.com.np/projects/projects/smartshop.html</loc>
-    <lastmod>2026-07-10</lastmod>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.70</priority>
     <image:image>
       <image:loc>https://sanjitdas.com.np/images/smartshop.png</image:loc>
+      <image:caption>SmartShop Project by Sanjit Das</image:caption>
     </image:image>
   </url>
 
   <!-- Utility pages -->
   <url>
     <loc>https://sanjitdas.com.np/form.html</loc>
-    <lastmod>2026-07-10</lastmod>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.40</priority>
   </url>
 
   <url>
     <loc>https://sanjitdas.com.np/404.html</loc>
-    <lastmod>2026-07-10</lastmod>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.10</priority>
   </url>
 
   <url>
     <loc>https://sanjitdas.com.np/privacy-policy.html</loc>
-    <lastmod>2026-07-10</lastmod>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.30</priority>
   </url>
 
   <url>
     <loc>https://sanjitdas.com.np/terms.html</loc>
-    <lastmod>2026-07-10</lastmod>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.30</priority>
   </url>

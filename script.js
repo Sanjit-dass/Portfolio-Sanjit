@@ -76,63 +76,57 @@ $(function () {
         gsap.registerPlugin(ScrollTrigger);
 
         // Section scroll animations - fade + slide + scale
-        gsap.utils.toArray('section').forEach((section, index) => {
-            const direction = index % 2 === 0 ? -100 : 100;
+        // Premium section reveal with staggered content entrance
+        ScrollTrigger.defaults({
+            toggleActions: 'play reverse play reverse',
+            markers: false,
+        });
+
+        gsap.utils.toArray('section').forEach((section) => {
             gsap.from(section, {
                 scrollTrigger: {
                     trigger: section,
                     start: 'top 85%',
-                    toggleActions: 'play reverse play reverse'
+                    end: 'bottom 25%',
                 },
                 opacity: 0,
-                x: direction,
-                scale: 0.95,
-                duration: 1.2,
-                ease: 'power3.out'
+                y: 50,
+                duration: 1.1,
+                ease: 'power3.out',
             });
+
+            const sectionChildren = section.querySelectorAll('.section-head, .edu-track, .carousel-shell, .services-grid, .tech-skill-grid, .slider-container, .contact-form-panel, .project-card, .service-card, .tech-skill-card, .edu-card');
+            if (sectionChildren.length) {
+                gsap.from(sectionChildren, {
+                    scrollTrigger: {
+                        trigger: section,
+                        start: 'top 85%',
+                    },
+                    opacity: 0,
+                    y: 30,
+                    duration: 0.8,
+                    stagger: 0.08,
+                    ease: 'power3.out',
+                });
+            }
         });
 
-        // Project cards stagger animation - fade + slide + scale
-        gsap.from('.project-card', {
-            scrollTrigger: { trigger: '.project-carousel', start: 'top 80%', toggleActions: 'play reverse play reverse' },
-            opacity: 0,
-            y: 50,
-            scale: 0.9,
-            duration: 0.8,
-            stagger: 0.1,
-            ease: 'power3.out'
-        });
-
-        // Service cards stagger animation
-        gsap.from('.service-card', {
-            scrollTrigger: { trigger: '.services-grid', start: 'top 80%', toggleActions: 'play reverse play reverse' },
-            opacity: 0,
-            y: 50,
-            scale: 0.9,
-            duration: 0.8,
-            stagger: 0.1,
-            ease: 'power3.out'
-        });
-
-        // Skill cards stagger animation
-        gsap.from('.tech-skill-card', {
-            scrollTrigger: { trigger: '.tech-skill-grid', start: 'top 80%', toggleActions: 'play reverse play reverse' },
-            opacity: 0,
-            y: 50,
-            scale: 0.9,
-            duration: 0.8,
-            stagger: 0.1,
-            ease: 'power3.out'
-        });
-
-        // Education cards reveal
-        gsap.from('.section-edu .edu-card', {
-            scrollTrigger: { trigger: '.section-edu', start: 'top 80%', toggleActions: 'play reverse play reverse' },
-            opacity: 0,
-            x: -50,
-            duration: 0.8,
-            stagger: 0.15,
-            ease: 'power3.out'
+        // Additional card reveal polish for overlapping sections
+        const revealSelectors = ['.project-card', '.service-card', '.tech-skill-card', '.section-edu .edu-card'];
+        revealSelectors.forEach((selector) => {
+            gsap.utils.toArray(selector).forEach((card) => {
+                gsap.from(card, {
+                    scrollTrigger: {
+                        trigger: card,
+                        start: 'top 92%',
+                    },
+                    opacity: 0,
+                    y: 24,
+                    scale: 0.99,
+                    duration: 0.75,
+                    ease: 'power3.out',
+                });
+            });
         });
 
         // Navigation smooth transition - fade + slide + scale

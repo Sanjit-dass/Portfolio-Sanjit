@@ -608,7 +608,8 @@ function initScrollReveals() {
     if (document.body.classList.contains('aos-enabled')) {
         return;
     }
-    var nodes = document.querySelectorAll('.reveal');
+    // Skip elements that use AOS to avoid conflicting animation systems
+    var nodes = document.querySelectorAll('.reveal:not([data-aos])');
     if (!nodes.length) {
         return;
     }
@@ -624,6 +625,8 @@ function initScrollReveals() {
                 if (!entry.isIntersecting) {
                     return;
                 }
+                // If element has AOS attribute, leave it to AOS (shouldn't be observed here)
+                if (entry.target.hasAttribute('data-aos')) return;
                 entry.target.classList.add('is-visible');
                 io.unobserve(entry.target);
             });
@@ -668,10 +671,10 @@ function initAOS() {
     AOS.init({
         duration: 800,
         easing: 'ease-out-cubic',
-        once: true,
+        once: false,
         offset: 80,
         delay: 0,
-        mirror: false,
+        mirror: true,
         anchorPlacement: 'top-bottom',
     });
 }

@@ -297,7 +297,7 @@
     <main id="main-content">
 
     <!-- home section start -->
-    <section class="home hero-section" id="home">
+    <section class="home hero-section" id="home"data-aos="fade-right">
         <div class="hero-bg" aria-hidden="true">
             <video class="hero-bg-video" autoplay loop playsinline preload="metadata">
                 <source src="./images/fullstackdeveloper.mp4" type="video/mp4">
@@ -325,26 +325,27 @@
 
 
     <!-- about section start -->
-    <section class="about section--hero-bg" id="about">
-        <div class="max-width">
-            <h2 class="title title--on-hero-bg reveal" data-aos="fade-up">About me</h2>
-            <div class="about-content">
-                <div class="column left reveal reveal--left" data-aos="fade-right">
+    <section class="about section--hero-bg" id="about"data-aos="fade-right">
+        <div class="max-width " >
+            <h2 class="title title--on-hero-bg reveal" data-aos="fade-right">About me</h2>
+            <div class="about-content" >
+                <div class="column left" data-aos="fade-right">
                     <img src="./images/sanjitPhoto.jpeg" alt="Sanjit Das">
                 </div>
-                <div class="column right reveal" data-aos="fade-up" data-aos-delay="80">
-                    <p class="about-intro-line text--on-hero-bg">
+                <div class="column right" data-aos="fade-left">
+                    <p class="about-intro-line text--on-hero-bg" data-aos="fade-left">
                         <span class="about-intro-premium">I'm Sanjit Das and I'm a</span>
                         <span class="typing-2 typing-about text-accent font-bold"></span>
                     </p>
-                    <p class="p--on-hero-bg">I’m <strong>Sanjit Das</strong>, a full stack developer with hands-on experience building modern web applications from the front end to the server side. My work spans responsive UI development, React interfaces, Node.js APIs, database-driven features, and clean implementation that supports long-term growth.
+                    <p class="p--on-hero-bg" data-aos="fade-left">
+                        I’m <strong>Sanjit Das</strong>, a full stack developer with hands-on experience building modern web applications from the front end to the server side. My work spans responsive UI development, React interfaces, Node.js APIs, database-driven features, and clean implementation that supports long-term growth.
 
                         I specialize in creating fast, accessible, and user-friendly websites that balance visual polish with technical reliability. Whether I’m building a portfolio website, a business landing page, an e-commerce experience, or a React-based product, I focus on clarity, maintainability, and measurable results.
 
                         My background includes practical experience with HTML, CSS, JavaScript, React, Tailwind CSS, Bootstrap, Node.js, Express.js, MongoDB, and Git. I care deeply about problem solving, thoughtful architecture, strong UX, and delivering work that feels polished from the first click to the final interaction.
 
                         I’m motivated by meaningful product work and collaborative projects where design, performance, and engineering come together to create something lasting.</p>
-                    <div class="social-row social-row--on-dark" aria-label="Social profiles">
+                    <div class="social-row social-row--on-dark" aria-label="Social profiles" data-aos="fade-left">
                         <a href="https://github.com/Sanjit-dass" target="_blank" rel="noopener noreferrer" class="social-btn social-btn--github" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
                         <a href="https://www.facebook.com/dassanjitkumar.das" target="_blank" rel="noopener noreferrer" class="social-btn social-btn--facebook" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
                         <a href="https://www.youtube.com/@engineeringbasic94" target="_blank" rel="noopener noreferrer" class="social-btn social-btn--youtube" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
@@ -360,29 +361,29 @@
 
     <section id="education" class="section-edu">
         <div class="max-w-6xl mx-auto px-5 md:px-8">
-            <header class="section-head text-center mb-14 md:mb-20 reveal" data-aos="fade-up">
-                <p class="section-eyebrow">Background</p>
-                <h2 class="font-display text-3xl md:text-4xl font-semibold tracking-tight text-white">Education &amp; experience</h2>
+            <header class="section-head text-center mb-14 md:mb-20 reveal" data-aos="slide-right">
+                <p class="section-eyebrow"data-aos="fade-right">Background</p>
+                <h2 class="font-display text-3xl md:text-4xl font-semibold tracking-tight text-white"data-aos="fade-left">Education &amp; experience</h2>
             </header>
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12">
-                <div class="edu-track reveal" data-aos="fade-up">
+                <div class="edu-track reveal reveal--left" data-aos="fade-right">
                     <h3 class="edu-col-title"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i> Education</h3>
 
-                    <article class="edu-card edu-card--timeline">
+                    <article class="edu-card edu-card--timeline" data-aos="fade-right">
                         <span class="edu-date-chip">2022–2026</span>
                         <h4 class="edu-card-title">B.Tech in computer Science & Engineering</h4>
                         <p class="edu-card-meta">Aditya Engineering College</p>
                         <p class="edu-card-note">Focused on software engineering fundamentals, problem solving, and practical full stack application development.</p>
                     </article>
 
-                    <article class="edu-card edu-card--timeline">
+                    <article class="edu-card edu-card--timeline" data-aos="slide-up">
                         <span class="edu-date-chip">2018–2020</span>
                         <h4 class="edu-card-title">Intermediate</h4>
                         <p class="edu-card-meta">Bhanu Memorial English Boarding Secondary School</p>
                         <p class="edu-card-note">Completed science studies with a focus on math, physics, and computer science foundations.</p>
                     </article>
 
-                    <article class="edu-card edu-card--timeline">
+                    <article class="edu-card edu-card--timeline" data-aos="slide-up">
                         <span class="edu-date-chip">2018</span>
                         <h4 class="edu-card-title">Schooling</h4>
                         <p class="edu-card-meta">Bal Bodh Secondary School</p>
@@ -390,10 +391,10 @@
                     </article>
                 </div>
 
-                <div class="edu-track reveal reveal--delay-1" data-aos="fade-up" data-aos-delay="90">
-                    <h3 class="edu-col-title"><i class="fa-solid fa-briefcase" aria-hidden="true"></i> Experience</h3>
+                <div class="edu-track reveal reveal--right reveal--delay-1" data-aos="fade-left" data-aos-delay="90"data-aos="fade-left">
+                    <h3 class="edu-col-title" data-aos="fade-right"><i class="fa-solid fa-briefcase" aria-hidden="true"></i> Experience</h3>
 
-                    <article class="edu-card edu-card--timeline">
+                    <article class="edu-card edu-card--timeline" data-aos="slide-up">
                         <span class="edu-date-chip">2024–2025</span>
                         <h4 class="edu-card-title">Web Developer</h4>
                         <p class="edu-card-meta">Blue Fox (P) Ltd</p>
@@ -403,7 +404,7 @@
                         </ul>
                     </article>
 
-                    <article class="edu-card edu-card--timeline">
+                    <article class="edu-card edu-card--timeline"data-aos="slide-up">
                         <span class="edu-date-chip">2024–2025</span>
                         <h4 class="edu-card-title">Java Full Stack Intern</h4>
                         <p class="edu-card-meta">BrainOvision Solutions Pvt. Ltd</p>
@@ -413,7 +414,7 @@
                         </ul>
                     </article>
 
-                    <article class="edu-card edu-card--timeline">
+                    <article class="edu-card edu-card--timeline" data-aos="slide-up">
                         <span class="edu-date-chip">2024–2025</span>
                         <h4 class="edu-card-title">Web Development Intern</h4>
                         <p class="edu-card-meta">InternPe</p>
@@ -426,24 +427,24 @@
     <!-- project section -->
 
 
-    <section class="projects section--hero-bg" id="projects">
+    <section class="projects section--hero-bg" id="projects"data-aos="slide-up">
         <div class="max-w-6xl mx-auto px-5 md:px-8 text-center">
-            <header class="section-head mb-10 md:mb-14 reveal" data-aos="fade-up">
-                <p class="section-eyebrow">Portfolio</p>
-                <h2 class="text-3xl md:text-4xl font-bold text-white tracking-tight">Selected engineering work</h2>
-                <p class="section-sub mx-auto mt-3 max-w-2xl text-muted">Cards are teasers only — each <strong class="text-slate-300">Read case study</strong> opens a full write-up (goals, approach, stack, results). Use the arrows under the row to move between slides.</p>
+            <header class="section-head mb-10 md:mb-14 reveal" data-aos="slide-right">
+                <p class="section-eyebrow"data-aos="slide-right">Portfolio</p>
+                <h2 class="text-3xl md:text-4xl font-bold text-white tracking-tight" data-aos="slide-left">Selected engineering work</h2>
+                <p class="section-sub mx-auto mt-3 max-w-2xl text-muted" data-aos="slide-left">Cards are teasers only — each <strong class="text-slate-300">Read case study</strong> opens a full write-up (goals, approach, stack, results). Use the arrows under the row to move between slides.</p>
             </header>
             <div class="carousel-shell carousel-shell--projects reveal reveal--delay-1" data-aos="fade-up" data-aos-delay="90">
             <div class="owl-carousel owl-theme project-carousel">
 <!-- bal bodh school -->
-   <div class="project-card card">
+    <div class="project-card card" data-aos="slide-up">
                     <div class="box project-box">
                         <a href="https://balbodhsecondaryschool.edu.np/" class="project-cover-link" aria-label="Bal Bodh Secondary — official website" target="_blank" rel="noopener noreferrer">
                             <div class="project-cover-wrap">
                                 <img src="./gallary/balbodhschool.png" alt="Bal Bodh Secondary preview" class="project-cover-img" width="800" height="450" loading="lazy">
                             </div>
                         </a>
-                        <div class="project-card-body">
+                        <div class="project-card-body" data-aos="fade-up">
                             <span class="project-pill">Institution</span>
                             <h3 class="project-card-title">Bal Bodh Secondary</h3>
                             <p class="project-card-meta">School website · Educational presence</p>
@@ -455,14 +456,14 @@
                 </div>
 
                 <!-- sanjit mart -->
-                <div class="project-card card">
+                <div class="project-card card" data-aos="slide-up">
                     <div class="box project-box">
                         <a href="./projects/sanjit-mart.html" class="project-cover-link" aria-label="Sanjit Mart — full details">
                             <div class="project-cover-wrap">
                                 <img src="./images/sanjitmart.jpg" alt="Sanjit Mart preview" class="project-cover-img" width="800" height="450" loading="lazy">
                             </div>
                         </a>
-                        <div class="project-card-body">
+                        <div class="project-card-body" data-aos="fade-up">
                             <span class="project-pill">E-commerce</span>
                             <h3 class="project-card-title">Sanjit Mart</h3>
                             <p class="project-card-meta">Storefront · Catalog · UX flows</p>
@@ -473,14 +474,14 @@
                     </div>
                 </div>
 
-                <div class="project-card card">
+                <div class="project-card card" data-aos="slide-up">
                     <div class="box project-box">
                         <a href="./projects/spotify-clone.html" class="project-cover-link" aria-label="Spotify-style player — full details">
                             <div class="project-cover-wrap">
                                 <img src="./images/spotify.jpg" alt="Spotify-style UI preview" class="project-cover-img" width="800" height="450" loading="lazy">
                             </div>
                         </a>
-                        <div class="project-card-body">
+                        <div class="project-card-body" data-aos="fade-up">
                             <span class="project-pill">UI engineering</span>
                             <h3 class="project-card-title">Spotify-style shell</h3>
                             <p class="project-card-meta">Dark theme · Layout system · Media UI</p>
@@ -491,14 +492,14 @@
                     </div>
                 </div>
 
-                <div class="project-card card">
+                <div class="project-card card" data-aos="slide-up">
                     <div class="box project-box">
                         <a href="./projects/simon-says.html" class="project-cover-link" aria-label="Simon Says — full details">
                             <div class="project-cover-wrap">
                                 <img src="./images/simon sange.jpg" alt="Simon Says game preview" class="project-cover-img" width="800" height="450" loading="lazy">
                             </div>
                         </a>
-                        <div class="project-card-body">
+                        <div class="project-card-body" data-aos="fade-up">
                             <span class="project-pill">JavaScript</span>
                             <h3 class="project-card-title">Simon Says</h3>
                             <p class="project-card-meta">Game loop · State · DOM</p>
@@ -509,14 +510,14 @@
                     </div>
                 </div>
 
-                <div class="project-card card">
+                <div class="project-card card" data-aos="slide-up">
                     <div class="box project-box">
                         <a href="./projects/connect-four.html" class="project-cover-link" aria-label="Connect Four — full details">
                             <div class="project-cover-wrap">
                                 <img src="./images/connect4game.jpg" alt="Connect Four preview" class="project-cover-img" width="800" height="450" loading="lazy">
                             </div>
                         </a>
-                        <div class="project-card-body">
+                        <div class="project-card-body" data-aos="fade-up">
                             <span class="project-pill">Logic &amp; grid</span>
                             <h3 class="project-card-title">Connect Four</h3>
                             <p class="project-card-meta">2-player · Win detection · Board model</p>
@@ -529,7 +530,7 @@
 
               
 
-                <div class="project-card card">
+                <div class="project-card card" data-aos="slide-up">
                     <div class="box project-box">
                         <a href="./projects/storefront.html" class="project-cover-link" aria-label="E-commerce storefront — full details">
                             <div class="project-cover-wrap">
@@ -547,7 +548,7 @@
                     </div>
                 </div>
 
-                <div class="project-card card">
+                <div class="project-card card" data-aos="slide-up">
                     <div class="box project-box">
                         <a href="./projects/complaintpro.html" class="project-cover-link" aria-label="ComplaintPro — full details">
                             <div class="project-cover-wrap">
@@ -565,7 +566,7 @@
                     </div>
                 </div>
 
-                <div class="project-card card">
+                <div class="project-card card" data-aos="slide-up">
                     <div class="box project-box">
                         <a href="./projects/jobportal.html" class="project-cover-link" aria-label="Job Portal — full details">
                             <div class="project-cover-wrap">
@@ -583,7 +584,7 @@
                     </div>
                 </div>
 
-                <div class="project-card card">
+                <div class="project-card card" data-aos="slide-up">
                     <div class="box project-box">
                         <a href="./projects/personal-ai-assistant.html" class="project-cover-link" aria-label="Personal AI Assistant — full details">
                             <div class="project-cover-wrap">
@@ -601,7 +602,7 @@
                     </div>
                 </div>
 
-                <div class="project-card card">
+                <div class="project-card card" data-aos="slide-up">
                     <div class="box project-box">
                         <a href="./projects/postvault.html" class="project-cover-link" aria-label="PostVault — full details">
                             <div class="project-cover-wrap">
@@ -644,70 +645,70 @@
 
 
     <!-- services section start -->
-    <section class="services section-dark" id="services">
+    <section class="services section-dark" id="services"data-aos="fade-right">
         <div class="max-w-7xl mx-auto px-5 md:px-8">
-            <header class="section-head text-center mb-10 md:mb-14 reveal" data-aos="fade-up">
-                <p class="section-eyebrow">Services</p>
-                <h2 class="font-display text-3xl md:text-4xl font-semibold text-white tracking-tight">What I build for clients</h2>
-                <p class="section-sub mx-auto mt-3 max-w-3xl text-muted">Frontend and software engineering services designed for product quality, speed, and maintainability.</p>
+            <header class="section-head text-center mb-10 md:mb-14">
+                <p class="section-eyebrow" data-aos="slide-right">Services</p>
+                <h2 class="font-display text-3xl md:text-4xl font-semibold text-white tracking-tight" data-aos="fade-left">What I build for clients</h2>
+                <p class="section-sub mx-auto mt-3 max-w-3xl text-muted" data-aos="fade-right">Frontend and software engineering services designed for product quality, speed, and maintainability.</p>
             </header>
 
-            <div class="services-grid">
-                <article class="service-card reveal" data-aos="fade-up">
+            <div class="services-grid" data-aos="fade-right">
+                <article class="service-card" data-aos="slide-up" data-aos-delay="60"> 
                     <div class="service-icon"><i class="fa-solid fa-globe" aria-hidden="true"></i></div>
                     <h3 class="service-title">Modern Website Development</h3>
                     <p class="service-desc">Business-ready websites with structured code, clear content hierarchy, and future-friendly architecture.</p>
                 </article>
 
-                <article class="service-card reveal reveal--delay-1" data-aos="fade-up" data-aos-delay="60">
+                <article class="service-card" data-aos="fade-left" data-aos-delay="90">
                     <div class="service-icon"><i class="fa-solid fa-mobile-screen-button" aria-hidden="true"></i></div>
                     <h3 class="service-title">Responsive Web Design</h3>
                     <p class="service-desc">Layouts optimized for phone, tablet, and desktop with smooth interactions and consistent visual quality.</p>
                 </article>
 
-                <article class="service-card reveal reveal--delay-2" data-aos="fade-up" data-aos-delay="120">
+                <article class="service-card" data-aos="fade-right" data-aos-delay="120">
                     <div class="service-icon"><i class="fa-solid fa-code" aria-hidden="true"></i></div>
                     <h3 class="service-title">Frontend Development</h3>
                     <p class="service-desc">Clean, component-based UI implementation using modern HTML, CSS, JavaScript, and scalable styling systems.</p>
                 </article>
 
-                <article class="service-card reveal" data-aos="fade-up" data-aos-delay="180">
+                <article class="service-card" data-aos="fade-left" data-aos-delay="150">
                     <div class="service-icon"><i class="fa-brands fa-react" aria-hidden="true"></i></div>
                     <h3 class="service-title">React Web Applications</h3>
                     <p class="service-desc">Interactive React applications with reusable components, strong state management, and production-grade UX.</p>
                 </article>
 
-                <article class="service-card reveal reveal--delay-1" data-aos="fade-up" data-aos-delay="240">
+                <article class="service-card" data-aos="fade-left" data-aos-delay="180">
                     <div class="service-icon"><i class="fa-solid fa-window-maximize" aria-hidden="true"></i></div>
                     <h3 class="service-title">Landing Page Design</h3>
                     <p class="service-desc">Conversion-focused landing pages with sharp messaging, high visual impact, and clear user actions.</p>
                 </article>
 
-                <article class="service-card reveal reveal--delay-2" data-aos="fade-up" data-aos-delay="300">
+                <article class="service-card" data-aos="fade-right" data-aos-delay="210">
                     <div class="service-icon"><i class="fa-solid fa-id-badge" aria-hidden="true"></i></div>
                     <h3 class="service-title">Portfolio Website Creation</h3>
                     <p class="service-desc">Premium portfolio websites tailored for developers, freelancers, and creative professionals.</p>
                 </article>
 
-                <article class="service-card reveal" data-aos="fade-up" data-aos-delay="360">
+                <article class="service-card" data-aos="fade-left" data-aos-delay="240">
                     <div class="service-icon"><i class="fa-solid fa-cart-shopping" aria-hidden="true"></i></div>
                     <h3 class="service-title">E-Commerce Website Development</h3>
                     <p class="service-desc">Storefront interfaces, product flows, and checkout-ready experiences that prioritize trust and performance.</p>
                 </article>
 
-                <article class="service-card reveal reveal--delay-1" data-aos="fade-up" data-aos-delay="420">
+                <article class="service-card" data-aos="fade-right" data-aos-delay="270">
                     <div class="service-icon"><i class="fa-brands fa-android" aria-hidden="true"></i></div>
                     <h3 class="service-title">Android App Development</h3>
                     <p class="service-desc">Android app interfaces and feature modules focused on usability, responsiveness, and real user workflows.</p>
                 </article>
 
-                <article class="service-card reveal reveal--delay-2" data-aos="fade-up" data-aos-delay="480">
+                <article class="service-card" data-aos="fade-right" data-aos-delay="300">
                     <div class="service-icon"><i class="fa-solid fa-plug-circle-bolt" aria-hidden="true"></i></div>
                     <h3 class="service-title">API Integration</h3>
                     <p class="service-desc">Seamless third-party and custom API integration with reliable error handling and secure data communication.</p>
                 </article>
 
-                <article class="service-card reveal" data-aos="fade-up" data-aos-delay="540">
+                <article class="service-card" data-aos="fade-right" data-aos-delay="330">
                     <div class="service-icon"><i class="fa-solid fa-screwdriver-wrench" aria-hidden="true"></i></div>
                     <h3 class="service-title">Website Optimization &amp; Bug Fixing</h3>
                     <p class="service-desc">Performance tuning, UI polish, and bug resolution to keep your website fast, stable, and professional.</p>
@@ -719,8 +720,8 @@
 
     <!-- skills section start -->
     <section class="skills section-dark py-16" id="skills">
-        <div class="max-w-7xl mx-auto px-5 md:px-8">
-            <header class="section-head text-center mb-10 md:mb-14 reveal" data-aos="fade-up">
+        <div class="max-w-7xl mx-auto px-5 md:px-8" data-aos="slide-right">
+            <header class="section-head text-center mb-10 md:mb-14 reveal" data-aos="slide-right">
                 <p class="section-eyebrow">Technical Expertise</p>
                 <h2 class="font-display text-3xl md:text-4xl font-semibold text-white tracking-tight">Tech Stack &amp; Engineering Skills</h2>
                 <p class="section-sub mx-auto mt-3 max-w-3xl text-muted">A practical engineering stack focused on robust interfaces, scalable APIs, and maintainable delivery for real product teams.</p>
@@ -732,7 +733,7 @@
                 <p class="tech-work-card__desc">I build scalable and maintainable full stack applications with clean architecture and strong separation between UI, API, and data layers. I focus on responsive interfaces, reusable components, API reliability, validation, performance optimization, and developer-friendly codebases using modern JavaScript technologies.</p>
             </article>
 
-            <div class="tech-skill-grid">
+            <div class="tech-skill-grid" data-aos="slide-up">
                 <article class="tech-skill-card reveal" data-aos="fade-up">
                     <div class="tech-skill-head">
                         <div class="tech-skill-icon"><i class="fa-solid fa-code"></i></div>
@@ -789,9 +790,9 @@
                 </article>
             </div>
 
-            <div class="tech-strengths reveal" data-aos="fade-up">
+            <div class="tech-strengths reveal" >
                 <h3 class="tech-strengths-title">Core Strengths</h3>
-                <div class="tech-badges">
+                <div class="tech-badges" data-aos="fade-up" data-aos="fade-right">
                     <span class="tech-badge">Responsive Design</span>
                     <span class="tech-badge">API Integration</span>
                     <span class="tech-badge">Clean UI Architecture</span>
@@ -806,7 +807,7 @@
 
     <!-- rewarded gallery -->
     <section class="section-dark gallery-section py-16" id="gallery" aria-labelledby="gallery-heading">
-        <div class="max-w-7xl mx-auto px-5 md:px-8">
+        <div class="max-w-7xl mx-auto px-5 md:px-8" data-aos="fade-right">
             <header class="section-head text-center mb-10 md:mb-14 reveal" data-aos="fade-up">
                 <p class="section-eyebrow">Photo Gallery</p>
                 <h2 id="gallery-heading" class="font-display text-3xl md:text-4xl font-semibold text-white tracking-tight">Gallery</h2>
@@ -942,8 +943,8 @@
 
     <!-- Certificate section -->
     <section class="section-dark cert-section" id="certificate" aria-labelledby="cert-heading">
-        <div class="max-w-7xl mx-auto px-5 md:px-8 pb-6">
-            <header class="section-head text-center mb-10 reveal" data-aos="fade-up">
+        <div class="max-w-7xl mx-auto px-5 md:px-8 pb-6" data-aos="fade-right">
+            <header class="section-head text-center mb-10 reveal" data-aos="slide-right">
                 <p class="section-eyebrow">Credentials</p>
                 <h2 id="cert-heading" class="font-display text-3xl md:text-4xl font-semibold text-white tracking-tight">Certifications</h2>
             </header>
@@ -1040,11 +1041,11 @@
         </div>
     </section>
 
-    <section class="teams section-reviews" id="reviews">
-        <div class="max-width">
-            <header class="testimonials-head text-center mb-12 md:mb-14 reveal" data-aos="fade-up">
+    <section class="teams section-reviews" id="reviews" data-aos="fade-left">
+        <div class="max-width" data-aos="fade-right">
+            <header class="testimonials-head text-center mb-12 md:mb-14 reveal">
                 <p class="section-eyebrow section-eyebrow--on-dark">Client &amp; peer references</p>
-                <h2 class="testimonials-title">Recommendations</h2>
+                <h2 class="testimonials-title" data-aos="fade-right">Recommendations</h2>
                 <p class="testimonials-lead">Structured feedback from people who have reviewed deliverables, paired on features, or relied on my ownership in team settings.</p>
             </header>
             <div class="carousel-shell carousel-shell--reviews reveal reveal--delay-1" data-aos="fade-up" data-aos-delay="90">
@@ -1077,7 +1078,7 @@
                         </footer>
                     </article>
                 </div>
-                <div class="card testimonial-card-wrap">
+                <div class="card testimonial-card-wrap" data-aos="fade-right">
                     <article class="testimonial-card">
                         <span class="testimonial-badge">Reliability</span>
                         <div class="testimonial-stars" aria-hidden="true"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
@@ -1091,7 +1092,7 @@
                         </footer>
                     </article>
                 </div>
-                <div class="card testimonial-card-wrap">
+                <div class="card testimonial-card-wrap " data-aos="fade-right">
                     <article class="testimonial-card">
                         <span class="testimonial-badge">Responsive UI</span>
                         <div class="testimonial-stars" aria-hidden="true"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
@@ -1124,29 +1125,28 @@
         </div>
     </section>
 
-
     <section class="section-dark py-16" id="faq" aria-labelledby="faq-heading">
-        <div class="max-w-7xl mx-auto px-5 md:px-8">
+        <div class="max-w-7xl mx-auto px-5 md:px-8"data-aos="fade-right">
             <header class="section-head text-center mb-10 reveal" data-aos="fade-up">
-                <p class="section-eyebrow">Frequently Asked Questions</p>
-                <h2 id="faq-heading" class="font-display text-3xl md:text-4xl font-semibold text-white tracking-tight">Common questions about my work</h2>
+                <p class="section-eyebrow" data-aos="fade-right">Frequently Asked Questions</p>
+                <h2 id="faq-heading" class="font-display text-3xl md:text-4xl font-semibold text-white tracking-tight" data-aos="fade-left">Common questions about my work</h2>
             </header>
-            <div class="grid gap-4 md:grid-cols-2 reveal" data-aos="fade-up" data-aos-delay="80">
-                <article class="service-card">
-                    <h3 class="service-title">Do you build portfolio websites?</h3>
-                    <p class="service-desc">Yes. I create professional portfolio websites that present your work clearly, improve credibility, and support long-term personal branding.</p>
+            <div class="grid gap-4 md:grid-cols-2" data-aos="fade-up" data-aos-delay="80">
+                <article class="faq-card" data-aos="fade-right" data-aos-delay="110">
+                    <h3 class="faq-question">Do you build portfolio websites?</h3>
+                    <p class="faq-answer">Yes. I create professional portfolio websites that present your work clearly, improve credibility, and support long-term personal branding.</p>
                 </article>
-                <article class="service-card">
-                    <h3 class="service-title">Can you work with React and Node.js?</h3>
-                    <p class="service-desc">Absolutely. I build frontend experiences with React and connect them to APIs and databases using Node.js, Express.js, and MongoDB.</p>
+                <article class="faq-card" data-aos="fade-left" data-aos-delay="140">
+                    <h3 class="faq-question">Can you work with React and Node.js?</h3>
+                    <p class="faq-answer">Absolutely. I build frontend experiences with React and connect them to APIs and databases using Node.js, Express.js, and MongoDB.</p>
                 </article>
-                <article class="service-card">
-                    <h3 class="service-title">Do you help with SEO and performance?</h3>
-                    <p class="service-desc">Yes. I focus on clear structure, semantic HTML, accessibility, optimized images, and content that supports stronger search visibility.</p>
+                <article class="faq-card" data-aos="fade-right" data-aos-delay="170">
+                    <h3 class="faq-question">Do you help with SEO and performance?</h3>
+                    <p class="faq-answer">Yes. I focus on clear structure, semantic HTML, accessibility, optimized images, and content that supports stronger search visibility.</p>
                 </article>
-                <article class="service-card">
-                    <h3 class="service-title">Can you support ongoing projects?</h3>
-                    <p class="service-desc">Yes. I’m comfortable working on scoped builds, feature additions, UI improvements, and continuous product refinement.</p>
+                <article class="faq-card" data-aos="fade-left" data-aos-delay="200">
+                    <h3 class="faq-question">Can you support ongoing projects?</h3>
+                    <p class="faq-answer">Yes. I’m comfortable working on scoped builds, feature additions, UI improvements, and continuous product refinement.</p>
                 </article>
             </div>
         </div>
@@ -1154,7 +1154,7 @@
 
     <!-- contact section -->
     <section class="contact section-contact" id="contacts">
-        <div class="max-width">
+        <div class="max-width"data-aos="fade-right">
             <header class="section-head text-center mb-12 reveal" data-aos="fade-up">
                 <p class="section-eyebrow section-eyebrow--on-dark">Contact</p>
                 <h2 class="title font-display text-white">Let’s build your project</h2>
@@ -1165,25 +1165,25 @@
                     <div class="contact-card space-y-5">
                         <div class="contact-line">
                             <span class="contact-icon" aria-hidden="true"><i class="fas fa-phone"></i></span>
-                            <span class="text-slate-300">+977 98070 58858</span>
+                            <span class="text-slate-300"data-aos="fade-right">+977 98070 58858</span>
                         </div>
-                        <div class="contact-line">
+                        <div class="contact-line"data-aos="fade-left">
                             <span class="contact-icon" aria-hidden="true"><i class="fas fa-envelope"></i></span>
                             <a href="mailto:sanjit9842@gmail.com" class="text-slate-200 hover:text-accent transition-colors">sanjit9842@gmail.com</a>
                         </div>
-                        <div class="contact-line">
+                        <div class="contact-line"data-aos="fade-right">
                             <span class="contact-icon" aria-hidden="true"><i class="fas fa-location-dot"></i></span>
                             <span class="text-slate-300">Bhardha Saptari Nepal</span>
                         </div>
                     </div>
                 </div>
-                <div class="right w-full md:w-[62%] contact-form-panel reveal reveal--delay-1" data-aos="fade-up" data-aos-delay="90">
-                    <form action="#" class="space-y-4" id="contact-form" novalidate>
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="right w-full md:w-[62%] contact-form-panel reveal reveal--delay-1" data-aos="fade-right">
+                    <form action="#" class="space-y-4" id="contact-form" novalidate >
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4"data-aos="fade-left">
                             <input type="text" name="name" placeholder="Full name *" required autocomplete="name" class="form-input">
                             <input type="email" name="email" placeholder="Email *" required autocomplete="email" class="form-input">
                         </div>
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4" data-aos="fade-right">
                             <select name="designation" required class="form-input">
                                 <option value="">What do you need? *</option>
                                 <option>New website or landing page</option>
@@ -1194,8 +1194,8 @@
                             </select>
                             <input type="tel" name="mobile" placeholder="Phone *" required autocomplete="tel" class="form-input">
                         </div>
-                        <textarea name="message" placeholder="Message *" required rows="4" class="form-input form-textarea"></textarea>
-                        <button type="submit" class="btn btn-primary w-full md:w-auto justify-center">
+                        <textarea name="message" placeholder="Message *" required rows="4" class="form-input form-textarea"data-aos="fade-right"></textarea>
+                        <button type="submit" class="btn btn-primary w-full md:w-auto justify-center"data-aos="fade-right">
                             <span>Send message</span>
                             <i class="fas fa-arrow-right" aria-hidden="true"></i>
                         </button>
@@ -1204,23 +1204,23 @@
             </div>
 
             <footer class="site-footer reveal" data-aos="fade-up">
-                <div class="site-footer__grid">
+                <div class="site-footer__grid"data-aos="fade-right">
                     <div>
-                        <div class="footer-brand">
+                        <div class="footer-brand"data-aos="fade-left">
                             <a class="footer-brand__link" href="#home" aria-label="Sanjit Das — Home">
                                <div class="logo">
                 <a class="brand-link" href="#home" aria-label="Sanjit Das — Home">
                     <span class="brand-mark" aria-hidden="true">
                         <img src="./images/sanjitPhoto.jpeg" alt="Sanjit Das" class="brand-logo" width="44" height="44" loading="eager">
                     </span>
-                    <span class="brand-text">Sanjit Das</span>
+                    <span class="brand-text"data-aos="fade-right">Sanjit Das</span>
                 </a>
             </div>
                                 
                             </a>
                         </div>
-                        <p class="text-sm text-muted mt-2 max-w-xs">Full stack developer — thoughtful UI, dependable APIs, and maintainable code from database to browser.</p>
-                        <div class="flex gap-3 mt-4">
+                        <p class="text-sm text-muted mt-2 max-w-xs"data-aos="fade-right">Full stack developer — thoughtful UI, dependable APIs, and maintainable code from database to browser.</p>
+                        <div class="flex gap-3 mt-4"data-aos="fade-right">
                             <a href="https://github.com/Sanjit-dass" target="_blank" rel="noopener noreferrer" class="footer-social" aria-label="GitHub"><i class="fab fa-github"></i></a>
                             <a href="https://www.facebook.com/dassanjitkumar.das" target="_blank" rel="noopener noreferrer" class="footer-social" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                             <a href="https://www.youtube.com/@engineeringbasic94" target="_blank" rel="noopener noreferrer" class="footer-social" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
@@ -1228,8 +1228,8 @@
                         </div>
                     </div>
                     <div>
-                        <h3 class="footer-heading">Navigate</h3>
-                        <ul class="footer-links">
+                        <h3 class="footer-heading"data-aos="fade-left">Navigate</h3>
+                        <ul class="footer-links"data-aos="fade-right">
                             <li><a href="#about">About</a></li>
                             <li><a href="#projects">Projects</a></li>
                             <li><a href="#gallery">Gallery</a></li>
@@ -1238,15 +1238,15 @@
                         </ul>
                     </div>
                     <div>
-                        <h3 class="footer-heading">Services</h3>
-                        <ul class="footer-links">
+                        <h3 class="footer-heading"data-aos="fade-right">Services</h3>
+                        <ul class="footer-links"data-aos="fade-left">
                             <li>UI &amp; layout</li>
                             <li>Full-stack builds</li>
                             <li>APIs &amp; data</li>
                         </ul>
                     </div>
                 </div>
-                <div class="site-footer__bar text-center">
+                <div class="site-footer__bar text-center"data-aos="fade-right">
                     <span>© 2026 Sanjit Das. All rights reserved.</span>
                 </div>
             </footer>

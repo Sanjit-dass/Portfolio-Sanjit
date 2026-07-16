@@ -506,6 +506,48 @@ section .title::after{
     line-height: 1.75;
     color: #475569;
 }
+
+/* Reveal on-scroll helpers (used by script.js initScrollReveals)
+   - .reveal: base hidden state
+   - .reveal--left / .reveal--right: entry direction
+   - .reveal.is-visible: visible state when intersecting
+*/
+.reveal {
+    opacity: 0;
+    transform: translateX(0) translateY(14px);
+    transition: transform 640ms cubic-bezier(.2,.9,.2,1), opacity 640ms cubic-bezier(.2,.9,.2,1);
+    will-change: transform, opacity;
+}
+.reveal--left {
+    transform: translateX(-64px);
+}
+.reveal--right {
+    transform: translateX(64px);
+}
+.reveal.is-visible {
+    opacity: 1;
+    transform: translateX(0) translateY(0);
+}
+.reveal--delay-1 { transition-delay: 90ms; }
+.reveal--delay-2 { transition-delay: 180ms; }
+
+@media (prefers-reduced-motion: reduce) {
+    .reveal, .reveal--left, .reveal--right {
+        transition: none !important;
+        transform: none !important;
+        opacity: 1 !important;
+    }
+}
+
+/* If an element uses AOS, let AOS control the animation — disable our .reveal transforms */
+.reveal[data-aos], .reveal[data-aos] * {
+    /* leave children alone but ensure parent has no conflicting transform/opacity */
+}
+.reveal[data-aos] {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+}
 .about .about-content .right a{
     display: inline-block;
     
@@ -655,6 +697,38 @@ section .title::after{
     font-size: 0.95rem;
     line-height: 1.62;
     color: #cbd5e1;
+}
+
+.faq-card {
+    position: relative;
+    padding: 1.3rem 1.25rem;
+    border-radius: 18px;
+    background: linear-gradient(160deg, rgba(28, 36, 52, 0.92) 0%, rgba(18, 24, 39, 0.95) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.14);
+    transition: transform 0.28s ease, border-color 0.28s ease, box-shadow 0.28s ease, background 0.28s ease;
+}
+
+.faq-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(96, 165, 250, 0.28);
+    box-shadow: 0 22px 54px rgba(0, 0, 0, 0.22);
+    background: linear-gradient(160deg, rgba(34, 52, 88, 0.94) 0%, rgba(18, 24, 39, 0.98) 100%);
+}
+
+.faq-question {
+    font-size: 1.05rem;
+    line-height: 1.4;
+    color: #f8fafc;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+}
+
+.faq-answer {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: #cbd5e1;
+    margin: 0;
 }
 
 /* premium tech stack section */
@@ -3015,9 +3089,10 @@ body.project-detail {
                 transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* If AOS is enabled, disable legacy reveal styles to avoid double-animations */
-.aos-enabled .reveal,
-.aos-enabled .reveal.reveal--left {
+/* If AOS is enabled, disable legacy reveal styles only for non-AOS reveal elements */
+.aos-enabled .reveal:not([data-aos]),
+.aos-enabled .reveal.reveal--left:not([data-aos]),
+.aos-enabled .reveal.reveal--right:not([data-aos]) {
     opacity: 1 !important;
     transform: none !important;
     transition: none !important;
